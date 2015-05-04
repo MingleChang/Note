@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="File" syncable="YES">
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="file" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <entity name="List" syncable="YES">
+        <attribute name="isComplete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="list" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <entity name="Note" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deleteDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifyDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="remindDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="remindLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="remindLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="remindType" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uniqueID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="file" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="File" inverseName="note" inverseEntity="File" syncable="YES"/>
+        <relationship name="list" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="List" inverseName="note" inverseEntity="List" syncable="YES"/>
+    </entity>
+    <entity name="Tag" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="File" positionX="169" positionY="63" width="128" height="88"/>
+        <element name="Note" positionX="-27" positionY="116" width="128" height="238"/>
+        <element name="List" positionX="241" positionY="153" width="128" height="88"/>
+        <element name="Tag" positionX="117" positionY="207" width="128" height="60"/>
+    </elements>
+</model>
