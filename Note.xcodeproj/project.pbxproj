@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929751AF8A09700A8CF3C /* MCTextView.m */; };
+		4C89297A1AF8C6B300A8CF3C /* MCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929791AF8C6B300A8CF3C /* MCViewController.m */; };
+		4C89297D1AF8C6CA00A8CF3C /* MCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C89297C1AF8C6CA00A8CF3C /* MCNavigationController.m */; };
+		4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */; };
+		4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */; };
+		4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */; };
 		821A8A371AF3CA860084139A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A361AF3CA860084139A /* main.m */; };
 		821A8A3A1AF3CA860084139A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A391AF3CA860084139A /* AppDelegate.m */; };
 		821A8A3D1AF3CA860084139A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A3C1AF3CA860084139A /* ViewController.m */; };
@@ -32,6 +37,16 @@
 /* Begin PBXFileReference section */
 		4C8929741AF8A09700A8CF3C /* MCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTextView.h; sourceTree = "<group>"; };
 		4C8929751AF8A09700A8CF3C /* MCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextView.m; sourceTree = "<group>"; };
+		4C8929781AF8C6B300A8CF3C /* MCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCViewController.h; sourceTree = "<group>"; };
+		4C8929791AF8C6B300A8CF3C /* MCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCViewController.m; sourceTree = "<group>"; };
+		4C89297B1AF8C6C900A8CF3C /* MCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNavigationController.h; sourceTree = "<group>"; };
+		4C89297C1AF8C6CA00A8CF3C /* MCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNavigationController.m; sourceTree = "<group>"; };
+		4C89297E1AF8C6DE00A8CF3C /* MCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTableViewController.h; sourceTree = "<group>"; };
+		4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTableViewController.m; sourceTree = "<group>"; };
+		4C8929811AF8C6F700A8CF3C /* MCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTabBarController.h; sourceTree = "<group>"; };
+		4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTabBarController.m; sourceTree = "<group>"; };
+		4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCollectionViewController.h; sourceTree = "<group>"; };
+		4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionViewController.m; sourceTree = "<group>"; };
 		821A8A311AF3CA860084139A /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821A8A351AF3CA860084139A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		821A8A361AF3CA860084139A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +92,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4C8929771AF8C6A100A8CF3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C8929781AF8C6B300A8CF3C /* MCViewController.h */,
+				4C8929791AF8C6B300A8CF3C /* MCViewController.m */,
+				4C89297B1AF8C6C900A8CF3C /* MCNavigationController.h */,
+				4C89297C1AF8C6CA00A8CF3C /* MCNavigationController.m */,
+				4C89297E1AF8C6DE00A8CF3C /* MCTableViewController.h */,
+				4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */,
+				4C8929811AF8C6F700A8CF3C /* MCTabBarController.h */,
+				4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */,
+				4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */,
+				4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		821A8A281AF3CA860084139A = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +130,7 @@
 		821A8A331AF3CA860084139A /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				4C8929771AF8C6A100A8CF3C /* Controllers */,
 				4C8929731AF8A09700A8CF3C /* Views */,
 				821A8A5A1AF3CA990084139A /* CoreData */,
 				821A8A381AF3CA860084139A /* AppDelegate.h */,
@@ -248,12 +281,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C89297A1AF8C6B300A8CF3C /* MCViewController.m in Sources */,
 				821A8A3D1AF3CA860084139A /* ViewController.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
+				4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */,
 				821A8A601AF3CACC0084139A /* Note.xcdatamodeld in Sources */,
 				821A8A3A1AF3CA860084139A /* AppDelegate.m in Sources */,
 				821A8A5D1AF3CA990084139A /* CoreDataManager.m in Sources */,
+				4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */,
+				4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */,
 				821A8A371AF3CA860084139A /* main.m in Sources */,
+				4C89297D1AF8C6CA00A8CF3C /* MCNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
