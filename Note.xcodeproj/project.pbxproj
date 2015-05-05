@@ -22,6 +22,11 @@
 		821A8A511AF3CA860084139A /* NoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A501AF3CA860084139A /* NoteTests.m */; };
 		821A8A5D1AF3CA990084139A /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A5C1AF3CA990084139A /* CoreDataManager.m */; };
 		821A8A601AF3CACC0084139A /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A5E1AF3CACC0084139A /* Note.xcdatamodeld */; };
+		82438C261AF906F5001807A1 /* MCNoteEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C251AF906F5001807A1 /* MCNoteEditViewController.m */; };
+		82438C291AF90E8A001807A1 /* MCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C281AF90E8A001807A1 /* MCTextField.m */; };
+		82438C2E1AF91914001807A1 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C2D1AF91914001807A1 /* Common.m */; };
+		82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C331AF91E57001807A1 /* MCNoteViewController.m */; };
+		82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C361AF91E6D001807A1 /* MCRemindViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,16 @@
 		821A8A5B1AF3CA990084139A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		821A8A5C1AF3CA990084139A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		821A8A5F1AF3CACC0084139A /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		82438C241AF906F5001807A1 /* MCNoteEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNoteEditViewController.h; sourceTree = "<group>"; };
+		82438C251AF906F5001807A1 /* MCNoteEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNoteEditViewController.m; sourceTree = "<group>"; };
+		82438C271AF90E8A001807A1 /* MCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTextField.h; sourceTree = "<group>"; };
+		82438C281AF90E8A001807A1 /* MCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextField.m; sourceTree = "<group>"; };
+		82438C2C1AF91914001807A1 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		82438C2D1AF91914001807A1 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		82438C321AF91E57001807A1 /* MCNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNoteViewController.h; sourceTree = "<group>"; };
+		82438C331AF91E57001807A1 /* MCNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNoteViewController.m; sourceTree = "<group>"; };
+		82438C351AF91E6D001807A1 /* MCRemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRemindViewController.h; sourceTree = "<group>"; };
+		82438C361AF91E6D001807A1 /* MCRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRemindViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +103,8 @@
 			children = (
 				4C8929741AF8A09700A8CF3C /* MCTextView.h */,
 				4C8929751AF8A09700A8CF3C /* MCTextView.m */,
+				82438C271AF90E8A001807A1 /* MCTextField.h */,
+				82438C281AF90E8A001807A1 /* MCTextField.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,16 +112,13 @@
 		4C8929771AF8C6A100A8CF3C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C8929781AF8C6B300A8CF3C /* MCViewController.h */,
-				4C8929791AF8C6B300A8CF3C /* MCViewController.m */,
-				4C89297B1AF8C6C900A8CF3C /* MCNavigationController.h */,
-				4C89297C1AF8C6CA00A8CF3C /* MCNavigationController.m */,
-				4C89297E1AF8C6DE00A8CF3C /* MCTableViewController.h */,
-				4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */,
-				4C8929811AF8C6F700A8CF3C /* MCTabBarController.h */,
-				4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */,
-				4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */,
-				4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */,
+				82438C231AF906C6001807A1 /* Base */,
+				82438C241AF906F5001807A1 /* MCNoteEditViewController.h */,
+				82438C251AF906F5001807A1 /* MCNoteEditViewController.m */,
+				82438C321AF91E57001807A1 /* MCNoteViewController.h */,
+				82438C331AF91E57001807A1 /* MCNoteViewController.m */,
+				82438C351AF91E6D001807A1 /* MCRemindViewController.h */,
+				82438C361AF91E6D001807A1 /* MCRemindViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +144,7 @@
 		821A8A331AF3CA860084139A /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				82438C2A1AF91842001807A1 /* Helper */,
 				4C8929771AF8C6A100A8CF3C /* Controllers */,
 				4C8929731AF8A09700A8CF3C /* Views */,
 				821A8A5A1AF3CA990084139A /* CoreData */,
@@ -179,6 +194,32 @@
 				821A8A5C1AF3CA990084139A /* CoreDataManager.m */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		82438C231AF906C6001807A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4C8929781AF8C6B300A8CF3C /* MCViewController.h */,
+				4C8929791AF8C6B300A8CF3C /* MCViewController.m */,
+				4C89297B1AF8C6C900A8CF3C /* MCNavigationController.h */,
+				4C89297C1AF8C6CA00A8CF3C /* MCNavigationController.m */,
+				4C89297E1AF8C6DE00A8CF3C /* MCTableViewController.h */,
+				4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */,
+				4C8929811AF8C6F700A8CF3C /* MCTabBarController.h */,
+				4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */,
+				4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */,
+				4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		82438C2A1AF91842001807A1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				82438C2C1AF91914001807A1 /* Common.h */,
+				82438C2D1AF91914001807A1 /* Common.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,11 +323,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C89297A1AF8C6B300A8CF3C /* MCViewController.m in Sources */,
+				82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */,
 				821A8A3D1AF3CA860084139A /* ViewController.m in Sources */,
+				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
 				4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */,
+				82438C261AF906F5001807A1 /* MCNoteEditViewController.m in Sources */,
 				821A8A601AF3CACC0084139A /* Note.xcdatamodeld in Sources */,
+				82438C2E1AF91914001807A1 /* Common.m in Sources */,
 				821A8A3A1AF3CA860084139A /* AppDelegate.m in Sources */,
+				82438C291AF90E8A001807A1 /* MCTextField.m in Sources */,
 				821A8A5D1AF3CA990084139A /* CoreDataManager.m in Sources */,
 				4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */,
 				4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */,
