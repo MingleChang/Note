@@ -39,14 +39,10 @@
     self.titleTextView.font=[UIFont boldSystemFontOfSize:19];
     self.titleTextView.placeholderString=@"标题";
     self.titleTextView.backgroundColor=[UIColor clearColor];
-//    self.titleTextView.layer.borderWidth=ONE_PIXELS;
-//    self.titleTextView.layer.borderColor=RGB(153, 153, 153).CGColor;
     
     self.detailTextView.font=[UIFont systemFontOfSize:18];
     self.detailTextView.placeholderString=@"内容";
     self.detailTextView.backgroundColor=[UIColor clearColor];
-//    self.detailTextView.layer.borderWidth=ONE_PIXELS;
-//    self.detailTextView.layer.borderColor=RGB(153, 153, 153).CGColor;
     
     self.lineView.backgroundColor=RGB(232, 232, 232);
 }

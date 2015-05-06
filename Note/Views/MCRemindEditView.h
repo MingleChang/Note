@@ -1,5 +1,5 @@
 //
-//  MCTextField.h
+//  MCRemindEditView.h
 //  Text
 //
 //  Created by 常峻玮 on 15/5/6.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCTextField : UITextField
+@interface MCRemindEditView : UIView
 
 @end
