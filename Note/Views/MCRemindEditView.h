@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MCRemindEditView : UIView
-
+@property(nonatomic,assign)BOOL needRemind;
+@property(nonatomic,assign)UIEdgeInsets contentInsets;
+@property(nonatomic,strong)NSDate *remindDate;
 @end

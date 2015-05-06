@@ -26,6 +26,7 @@
 		821A8A511AF3CA860084139A /* NoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A501AF3CA860084139A /* NoteTests.m */; };
 		821A8A5D1AF3CA990084139A /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A5C1AF3CA990084139A /* CoreDataManager.m */; };
 		821A8A601AF3CACC0084139A /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A5E1AF3CACC0084139A /* Note.xcdatamodeld */; };
+		8231137C1AFA658300E1ED2C /* MCImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8231137B1AFA658300E1ED2C /* MCImageExtension.m */; };
 		82438C261AF906F5001807A1 /* MCNoteEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C251AF906F5001807A1 /* MCNoteEditViewController.m */; };
 		82438C2E1AF91914001807A1 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C2D1AF91914001807A1 /* Common.m */; };
 		82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C331AF91E57001807A1 /* MCNoteViewController.m */; };
@@ -79,6 +80,8 @@
 		821A8A5B1AF3CA990084139A /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		821A8A5C1AF3CA990084139A /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		821A8A5F1AF3CACC0084139A /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		8231137A1AFA658300E1ED2C /* MCImageExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageExtension.h; sourceTree = "<group>"; };
+		8231137B1AFA658300E1ED2C /* MCImageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageExtension.m; sourceTree = "<group>"; };
 		82438C241AF906F5001807A1 /* MCNoteEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNoteEditViewController.h; sourceTree = "<group>"; };
 		82438C251AF906F5001807A1 /* MCNoteEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNoteEditViewController.m; sourceTree = "<group>"; };
 		82438C2C1AF91914001807A1 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 		82438C2A1AF91842001807A1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8231137A1AFA658300E1ED2C /* MCImageExtension.h */,
+				8231137B1AFA658300E1ED2C /* MCImageExtension.m */,
 				82438C2C1AF91914001807A1 /* Common.h */,
 				82438C2D1AF91914001807A1 /* Common.m */,
 			);
@@ -342,6 +347,7 @@
 				821A8A3D1AF3CA860084139A /* ViewController.m in Sources */,
 				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
+				8231137C1AFA658300E1ED2C /* MCImageExtension.m in Sources */,
 				4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */,
 				82438C261AF906F5001807A1 /* MCNoteEditViewController.m in Sources */,
 				4C0721851AFA15A600CCFD3E /* MCRemindEditView.m in Sources */,
