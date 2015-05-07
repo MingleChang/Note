@@ -38,7 +38,7 @@
     [self initRemindEditViewAllDate];
 }
 -(void)initRemindEditViewAllSubView{
-    self.contentInsets=UIEdgeInsetsMake(0, 10, 0, 10);
+    self.contentInsets=UIEdgeInsetsMake(10, 10, 10, 10);
     UIImage *lRemindImage=[[UIImage imageNamed:@"Remind"]resetWithColor:REMIND_COLOR];
     self.remindImageView=[[UIImageView alloc]initWithImage:lRemindImage];
     [self.remindImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -167,6 +167,11 @@
 -(void)cancelRemindButtonClick:(UIButton *)sender{
     NSLog(@"Cancel Remind Me");
     self.needRemind=NO;
+}
+
+#pragma mark - Public Motheds
+-(CGFloat)calculateHeight{
+    return self.contentInsets.top+self.contentInsets.bottom+(self.needRemind?NEED_REMIND_HEIGHT:NO_REMIND_HEIGHT);
 }
 
 -(void)test{

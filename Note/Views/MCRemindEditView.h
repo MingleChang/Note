@@ -12,4 +12,5 @@
 @property(nonatomic,assign)BOOL needRemind;
 @property(nonatomic,assign)UIEdgeInsets contentInsets;
 @property(nonatomic,strong)NSDate *remindDate;
+-(CGFloat)calculateHeight;
 @end
