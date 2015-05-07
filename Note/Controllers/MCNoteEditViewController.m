@@ -10,10 +10,14 @@
 #import "MCTextView.h"
 #import "MCDottedLineView.h"
 #import "Common.h"
+#import "MCRemindEditView.h"
 @interface MCNoteEditViewController ()
 @property (weak, nonatomic) IBOutlet MCTextView *titleTextView;
 @property (weak, nonatomic) IBOutlet MCTextView *detailTextView;
-@property (weak, nonatomic) IBOutlet MCDottedLineView *lineView;
+@property (weak, nonatomic) IBOutlet MCDottedLineView *lineView1;
+@property (weak, nonatomic) IBOutlet MCRemindEditView *remindEditView;
+@property (weak, nonatomic) IBOutlet MCDottedLineView *lineView2;
+@property (weak, nonatomic) IBOutlet UILabel *modifyTimeLabel;
 
 @end
 
@@ -39,13 +43,11 @@
 -(void)initAllSubView{
     self.titleTextView.font=[UIFont boldSystemFontOfSize:19];
     self.titleTextView.placeholderString=@"标题";
-    self.titleTextView.backgroundColor=[UIColor clearColor];
+//    self.titleTextView.backgroundColor=[UIColor clearColor];
     
     self.detailTextView.font=[UIFont systemFontOfSize:18];
     self.detailTextView.placeholderString=@"内容";
-    self.detailTextView.backgroundColor=[UIColor clearColor];
-    
-    self.lineView.backgroundColor=RGB(232, 232, 232);
+//    self.detailTextView.backgroundColor=[UIColor clearColor];
 }
 -(void)initAllData{
     

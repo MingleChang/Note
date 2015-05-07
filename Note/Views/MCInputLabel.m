@@ -61,6 +61,10 @@
 -(void)initInputLabelAllDate{
     
 }
+#pragma mark - Setter And Getter
+-(void)setInputView:(UIView *)view{
+    self.textField.inputView=view;
+}
 #pragma mark - 
 -(BOOL)isFirstResponder{
     return [self.textField isFirstResponder];

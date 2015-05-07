@@ -19,6 +19,8 @@
 		4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */; };
 		4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */; };
 		4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EE1AFB2E2300449507 /* MCLineView.m */; };
+		82074FFF1AFBAF2B00F2B21A /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82074FFE1AFBAF2B00F2B21A /* MCStringExtension.m */; };
+		820750021AFBAFA800F2B21A /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 820750011AFBAFA800F2B21A /* MCDateExtension.m */; };
 		821A8A371AF3CA860084139A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A361AF3CA860084139A /* main.m */; };
 		821A8A3A1AF3CA860084139A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A391AF3CA860084139A /* AppDelegate.m */; };
 		821A8A3D1AF3CA860084139A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A3C1AF3CA860084139A /* ViewController.m */; };
@@ -70,6 +72,10 @@
 		4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
 		4CF397ED1AFB2E2300449507 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
 		4CF397EE1AFB2E2300449507 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
+		82074FFD1AFBAF2B00F2B21A /* MCStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCStringExtension.h; sourceTree = "<group>"; };
+		82074FFE1AFBAF2B00F2B21A /* MCStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringExtension.m; sourceTree = "<group>"; };
+		820750001AFBAFA800F2B21A /* MCDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDateExtension.h; sourceTree = "<group>"; };
+		820750011AFBAFA800F2B21A /* MCDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDateExtension.m; sourceTree = "<group>"; };
 		821A8A311AF3CA860084139A /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821A8A351AF3CA860084139A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		821A8A361AF3CA860084139A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -248,6 +254,10 @@
 				8231137B1AFA658300E1ED2C /* MCImageExtension.m */,
 				82438C2C1AF91914001807A1 /* Common.h */,
 				82438C2D1AF91914001807A1 /* Common.m */,
+				82074FFD1AFBAF2B00F2B21A /* MCStringExtension.h */,
+				82074FFE1AFBAF2B00F2B21A /* MCStringExtension.m */,
+				820750001AFBAFA800F2B21A /* MCDateExtension.h */,
+				820750011AFBAFA800F2B21A /* MCDateExtension.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -360,6 +370,7 @@
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
 				4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */,
 				8231137C1AFA658300E1ED2C /* MCImageExtension.m in Sources */,
+				820750021AFBAFA800F2B21A /* MCDateExtension.m in Sources */,
 				4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */,
 				82438C261AF906F5001807A1 /* MCNoteEditViewController.m in Sources */,
 				4C0721851AFA15A600CCFD3E /* MCRemindEditView.m in Sources */,
@@ -371,6 +382,7 @@
 				821A8A5D1AF3CA990084139A /* CoreDataManager.m in Sources */,
 				4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */,
 				4C0721861AFA15A600CCFD3E /* MCTextField.m in Sources */,
+				82074FFF1AFBAF2B00F2B21A /* MCStringExtension.m in Sources */,
 				4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */,
 				821A8A371AF3CA860084139A /* main.m in Sources */,
 				4C89297D1AF8C6CA00A8CF3C /* MCNavigationController.m in Sources */,

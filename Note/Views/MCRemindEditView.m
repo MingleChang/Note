@@ -13,7 +13,7 @@
 #define NEED_REMIND_HEIGHT 43
 #define NO_REMIND_HEIGHT 22
 #define REMIND_COLOR RGB(153,153,153)
-@interface MCRemindEditView()
+@interface MCRemindEditView()<UIPickerViewDataSource,UIPickerViewDelegate>
 @property(nonatomic,strong)UIImageView *remindImageView;
 @property(nonatomic,strong)MCInputLabel *remindDateLabel;
 @property(nonatomic,strong)MCInputLabel *remindTimeLabel;
@@ -21,10 +21,16 @@
 @property(nonatomic,strong)UILabel *remindMeLabel;
 @property(nonatomic,strong)UIButton *remindMeButton;
 @property(nonatomic,strong)UIButton *cancelRemindButton;
+@property(nonatomic,strong)UIDatePicker *datePicker;
+@property(nonatomic,strong)UIDatePicker *timePicker;
+@property(nonatomic,strong)UIPickerView *repeatPicker;
 
 @property(nonatomic,strong)NSLayoutConstraint *contentLeftConstraint;
 @property(nonatomic,strong)NSLayoutConstraint *contentRightConstraint;
 @property(nonatomic,strong)NSLayoutConstraint *contentTopConstraint;
+@property(nonatomic,strong)IBOutlet NSLayoutConstraint *heightConstraint;
+
+@property(nonatomic,copy)NSArray *repeatTitles;
 @end
 
 @implementation MCRemindEditView
@@ -34,8 +40,8 @@
     [self initRemindEditViewAllSubViewAndDate];
 }
 -(void)initRemindEditViewAllSubViewAndDate{
-    [self initRemindEditViewAllSubView];
     [self initRemindEditViewAllDate];
+    [self initRemindEditViewAllSubView];
 }
 -(void)initRemindEditViewAllSubView{
     self.contentInsets=UIEdgeInsetsMake(10, 10, 10, 10);
@@ -48,18 +54,22 @@
     [self.remindDateLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.remindDateLabel setFont:[UIFont systemFontOfSize:12]];
     [self.remindDateLabel setTextColor:REMIND_COLOR];
+    self.remindDateLabel.hidden=YES;
     [self addSubview:self.remindDateLabel];
     
     self.remindTimeLabel=[[MCInputLabel alloc]initWithFrame:CGRectZero];
     [self.remindTimeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.remindTimeLabel setFont:[UIFont systemFontOfSize:12]];
     [self.remindTimeLabel setTextColor:REMIND_COLOR];
+    self.remindTimeLabel.hidden=YES;
     [self addSubview:self.remindTimeLabel];
     
     self.remindRepeatLabel=[[MCInputLabel alloc]initWithFrame:CGRectZero];
     [self.remindRepeatLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.remindRepeatLabel setFont:[UIFont systemFontOfSize:12]];
     [self.remindRepeatLabel setTextColor:REMIND_COLOR];
+    self.remindRepeatLabel.text=self.repeatTitles[0];
+    self.remindRepeatLabel.hidden=YES;
     [self addSubview:self.remindRepeatLabel];
     
     self.remindMeLabel=[[UILabel alloc]initWithFrame:CGRectZero];
@@ -81,14 +91,36 @@
     [self.cancelRemindButton setImage:[UIImage imageNamed:@"Close"] forState:UIControlStateNormal];
     [self.cancelRemindButton addTarget:self action:@selector(cancelRemindButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.cancelRemindButton];
+    
+    self.datePicker=[[UIDatePicker alloc]init];
+    self.datePicker.datePickerMode=UIDatePickerModeDate;
+    [self.datePicker addTarget:self action:@selector(datePickerValueChange:) forControlEvents:UIControlEventValueChanged];
+    [self.remindDateLabel setInputView:self.datePicker];
+    
+    self.timePicker=[[UIDatePicker alloc]init];
+    self.timePicker.datePickerMode=UIDatePickerModeTime;
+    [self.timePicker addTarget:self action:@selector(timePickerValueChange:) forControlEvents:UIControlEventValueChanged];
+    [self.remindTimeLabel setInputView:self.timePicker];
+    
+    self.repeatPicker=[[UIPickerView alloc]init];
+    self.repeatPicker.delegate=self;
+    self.repeatPicker.dataSource=self;
+    [self.remindRepeatLabel setInputView:self.repeatPicker];
+    
     [self setLayoutContraints];
-    [self test];
 }
 -(void)initRemindEditViewAllDate{
-    
+    self.repeatTitles=@[@"不重复",@"每日重复",@"每周重复",@"每月重复",@"每年重复"];
 }
 
 -(void)setLayoutContraints{
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    if (self.heightConstraint==nil) {
+        self.heightConstraint=[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:[self calculateHeight]];
+        [self addConstraint:self.heightConstraint];
+    }
+    self.heightConstraint.constant=[self calculateHeight];
+    
     NSLayoutConstraint *lRemindImageViewLeftConstraint=[NSLayoutConstraint constraintWithItem:self.remindImageView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1.0 constant:self.contentInsets.left];
     NSLayoutConstraint *lRemindImageViewCenterYConstraint=[NSLayoutConstraint constraintWithItem:self.remindImageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.remindDateLabel attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
     [self addConstraints:@[lRemindImageViewLeftConstraint,lRemindImageViewCenterYConstraint]];
@@ -142,12 +174,27 @@
     self.remindRepeatLabel.hidden=!self.needRemind;
     self.cancelRemindButton.hidden=!self.needRemind;
 }
+-(CGFloat)calculateHeight{
+    return self.contentInsets.top+self.contentInsets.bottom+(self.needRemind?NEED_REMIND_HEIGHT:NO_REMIND_HEIGHT);
+}
 #pragma mark - Setter And Getter
 -(void)setNeedRemind:(BOOL)needRemind{
+    if (_needRemind==needRemind) {
+        return;
+    }
     _needRemind=needRemind;
+    if (needRemind) {
+        if (self.remindDate==nil) {
+            self.remindDate=[NSDate date];
+        }
+    }
     [self resetNeedRemindView];
+    self.heightConstraint.constant=[self calculateHeight];
 }
 -(void)setContentInsets:(UIEdgeInsets)contentInsets{
+    if (UIEdgeInsetsEqualToEdgeInsets(_contentInsets, contentInsets)) {
+        return;
+    }
     _contentInsets=contentInsets;
     if (self.contentLeftConstraint) {
         self.contentLeftConstraint.constant=contentInsets.left;
@@ -159,6 +206,16 @@
         self.contentTopConstraint.constant=contentInsets.top;
     }
 }
+-(void)setRemindDate:(NSDate *)remindDate{
+    if ([_remindDate isEqualToDate:remindDate]) {
+        return;
+    }
+    _remindDate=remindDate;
+    self.datePicker.date=remindDate;
+    self.timePicker.date=remindDate;
+    self.remindDateLabel.text=[remindDate stringFromFormat:@"yyyy/MM/dd"];
+    self.remindTimeLabel.text=[remindDate stringFromFormat:@"HH:mm"];
+}
 #pragma mark - Button Click
 -(void)remindMeButtonClick:(UIButton *)sender{
     NSLog(@"Remind Me");
@@ -167,27 +224,27 @@
 -(void)cancelRemindButtonClick:(UIButton *)sender{
     NSLog(@"Cancel Remind Me");
     self.needRemind=NO;
+    [self.remindDateLabel resignFirstResponder];
+    [self.remindTimeLabel resignFirstResponder];
+    [self.remindRepeatLabel resignFirstResponder];
+}
+-(void)datePickerValueChange:(UIDatePicker *)sender{
+    self.remindDate=sender.date;
+}
+-(void)timePickerValueChange:(UIDatePicker *)sender{
+    self.remindDate=sender.date;
 }
 
-#pragma mark - Public Motheds
--(CGFloat)calculateHeight{
-    return self.contentInsets.top+self.contentInsets.bottom+(self.needRemind?NEED_REMIND_HEIGHT:NO_REMIND_HEIGHT);
+#pragma mark - Picker DataSources
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
 }
-
--(void)test{
-    self.remindDateLabel.text=@"2016年12月29日";
-    self.remindTimeLabel.text=@"23:45";
-    self.remindRepeatLabel.text=@"不重复";
-    self.remindDateLabel.hidden=YES;
-    self.remindTimeLabel.hidden=YES;
-    self.remindRepeatLabel.hidden=YES;
-    self.cancelRemindButton.hidden=YES;
-    UITapGestureRecognizer *lTap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
-    [self addGestureRecognizer:lTap];
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return self.repeatTitles.count;
 }
--(void)tap:(UITapGestureRecognizer *)sender{
-    self.remindDateLabel.text=[self.remindDateLabel.text stringByAppendingString:@"Good"];
-    self.remindTimeLabel.text=[self.remindTimeLabel.text stringByAppendingString:@"Bye"];
+#pragma mark - Picker Delegate
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [self.repeatTitles objectAtIndex:row];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

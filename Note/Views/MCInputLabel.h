@@ -9,5 +9,5 @@
 #import "MCLineLabel.h"
 
 @interface MCInputLabel : MCLineLabel
-
+-(void)setInputView:(UIView *)view;
 @end

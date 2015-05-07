@@ -7,6 +7,7 @@
 //
 
 #import "MCLineLabel.h"
+#import "Common.h"
 @interface MCLineLabel()
 @property(nonatomic,strong)UIView *lineView;
 @end
@@ -54,7 +55,7 @@
     NSLayoutConstraint *lLineBottomConstraint=[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.lineView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
     [self addConstraints:@[lLineLeftConstraint,lLineRightConstraint,lLineBottomConstraint]];
     
-    NSLayoutConstraint *lLineHeightConstraint=[NSLayoutConstraint constraintWithItem:self.lineView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:1];
+    NSLayoutConstraint *lLineHeightConstraint=[NSLayoutConstraint constraintWithItem:self.lineView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:ONE_PIXELS];
     [self.lineView addConstraint:lLineHeightConstraint];
 }
 -(void)initLineLabelAllDate{
