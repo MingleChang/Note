@@ -8,11 +8,12 @@
 
 #import "MCNoteEditViewController.h"
 #import "MCTextView.h"
+#import "MCDottedLineView.h"
 #import "Common.h"
 @interface MCNoteEditViewController ()
 @property (weak, nonatomic) IBOutlet MCTextView *titleTextView;
 @property (weak, nonatomic) IBOutlet MCTextView *detailTextView;
-@property (weak, nonatomic) IBOutlet UIView *lineView;
+@property (weak, nonatomic) IBOutlet MCDottedLineView *lineView;
 
 @end
 

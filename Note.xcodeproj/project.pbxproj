@@ -17,6 +17,8 @@
 		4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */; };
 		4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */; };
 		4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */; };
+		4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */; };
+		4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EE1AFB2E2300449507 /* MCLineView.m */; };
 		821A8A371AF3CA860084139A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A361AF3CA860084139A /* main.m */; };
 		821A8A3A1AF3CA860084139A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A391AF3CA860084139A /* AppDelegate.m */; };
 		821A8A3D1AF3CA860084139A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A3C1AF3CA860084139A /* ViewController.m */; };
@@ -64,6 +66,10 @@
 		4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTabBarController.m; sourceTree = "<group>"; };
 		4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCollectionViewController.h; sourceTree = "<group>"; };
 		4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionViewController.m; sourceTree = "<group>"; };
+		4CF397EB1AFB2E2300449507 /* MCDottedLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDottedLineView.h; sourceTree = "<group>"; };
+		4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
+		4CF397ED1AFB2E2300449507 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
+		4CF397EE1AFB2E2300449507 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
 		821A8A311AF3CA860084139A /* Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Note.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821A8A351AF3CA860084139A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		821A8A361AF3CA860084139A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +119,10 @@
 		4C8929731AF8A09700A8CF3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CF397EB1AFB2E2300449507 /* MCDottedLineView.h */,
+				4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */,
+				4CF397ED1AFB2E2300449507 /* MCLineView.h */,
+				4CF397EE1AFB2E2300449507 /* MCLineView.m */,
 				4C07217B1AFA15A600CCFD3E /* MCInputLabel.h */,
 				4C07217C1AFA15A600CCFD3E /* MCInputLabel.m */,
 				4C07217D1AFA15A600CCFD3E /* MCLineLabel.h */,
@@ -346,7 +356,9 @@
 				82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */,
 				821A8A3D1AF3CA860084139A /* ViewController.m in Sources */,
 				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
+				4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
+				4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */,
 				8231137C1AFA658300E1ED2C /* MCImageExtension.m in Sources */,
 				4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */,
 				82438C261AF906F5001807A1 /* MCNoteEditViewController.m in Sources */,
