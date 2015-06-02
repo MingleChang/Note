@@ -29,6 +29,7 @@
 		4CFFD9571B1D9A3D002F3786 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9501B1D9A3D002F3786 /* FMDatabaseQueue.m */; };
 		4CFFD9581B1D9A3D002F3786 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9531B1D9A3D002F3786 /* FMResultSet.m */; };
 		4CFFD95B1B1DAAF2002F3786 /* Note.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4CFFD95A1B1DAAF2002F3786 /* Note.sqlite */; };
+		4CFFD9601B1DACFB002F3786 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFFD95F1B1DACFB002F3786 /* libsqlite3.dylib */; };
 		82074FFF1AFBAF2B00F2B21A /* MCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82074FFE1AFBAF2B00F2B21A /* MCStringExtension.m */; };
 		820750021AFBAFA800F2B21A /* MCDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 820750011AFBAFA800F2B21A /* MCDateExtension.m */; };
 		821A8A371AF3CA860084139A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821A8A361AF3CA860084139A /* main.m */; };
@@ -102,6 +103,7 @@
 		4CFFD9521B1D9A3D002F3786 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		4CFFD9531B1D9A3D002F3786 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		4CFFD95A1B1DAAF2002F3786 /* Note.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Note.sqlite; sourceTree = "<group>"; };
+		4CFFD95F1B1DACFB002F3786 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		82074FFD1AFBAF2B00F2B21A /* MCStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCStringExtension.h; sourceTree = "<group>"; };
 		82074FFE1AFBAF2B00F2B21A /* MCStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringExtension.m; sourceTree = "<group>"; };
 		820750001AFBAFA800F2B21A /* MCDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDateExtension.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFFD9601B1DACFB002F3786 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,11 +235,20 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		4CFFD95C1B1DACB8002F3786 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CFFD95F1B1DACFB002F3786 /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		821A8A281AF3CA860084139A = {
 			isa = PBXGroup;
 			children = (
 				821A8A331AF3CA860084139A /* Note */,
 				821A8A4D1AF3CA860084139A /* NoteTests */,
+				4CFFD95C1B1DACB8002F3786 /* Frameworks */,
 				821A8A321AF3CA860084139A /* Products */,
 			);
 			sourceTree = "<group>";
