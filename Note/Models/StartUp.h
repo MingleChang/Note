@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StartUp : NSObject
+#define DOCUMENT_PATH NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
+#define LIBRARY_PATH NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]
 
+@interface StartUp : NSObject
++(BOOL)checkDB;
 @end
