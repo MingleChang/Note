@@ -17,10 +17,11 @@
 		4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */; };
 		4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */; };
 		4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */; };
+		4CCBC67C1B1EDD9F0024C5CD /* SQLStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */; };
+		4CCBC67F1B1EDE160024C5CD /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC67E1B1EDE160024C5CD /* StartUp.m */; };
 		4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */; };
 		4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EE1AFB2E2300449507 /* MCLineView.m */; };
 		4CFFD93F1B1D9A18002F3786 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD93C1B1D9A18002F3786 /* Note.m */; };
-		4CFFD9401B1D9A18002F3786 /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD93E1B1D9A18002F3786 /* StartUp.m */; };
 		4CFFD9451B1D9A26002F3786 /* NoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9421B1D9A26002F3786 /* NoteManager.m */; };
 		4CFFD9461B1D9A26002F3786 /* SQLiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9441B1D9A26002F3786 /* SQLiteHelper.m */; };
 		4CFFD9541B1D9A3D002F3786 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD94A1B1D9A3D002F3786 /* FMDatabase.m */; };
@@ -79,14 +80,16 @@
 		4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTabBarController.m; sourceTree = "<group>"; };
 		4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCollectionViewController.h; sourceTree = "<group>"; };
 		4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionViewController.m; sourceTree = "<group>"; };
+		4CCBC67A1B1EDD9F0024C5CD /* SQLStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLStr.h; sourceTree = "<group>"; };
+		4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLStr.m; sourceTree = "<group>"; };
+		4CCBC67D1B1EDE160024C5CD /* StartUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUp.h; sourceTree = "<group>"; };
+		4CCBC67E1B1EDE160024C5CD /* StartUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUp.m; sourceTree = "<group>"; };
 		4CF397EB1AFB2E2300449507 /* MCDottedLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDottedLineView.h; sourceTree = "<group>"; };
 		4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
 		4CF397ED1AFB2E2300449507 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
 		4CF397EE1AFB2E2300449507 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
 		4CFFD93B1B1D9A18002F3786 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		4CFFD93C1B1D9A18002F3786 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		4CFFD93D1B1D9A18002F3786 /* StartUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUp.h; sourceTree = "<group>"; };
-		4CFFD93E1B1D9A18002F3786 /* StartUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUp.m; sourceTree = "<group>"; };
 		4CFFD9411B1D9A26002F3786 /* NoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteManager.h; sourceTree = "<group>"; };
 		4CFFD9421B1D9A26002F3786 /* NoteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteManager.m; sourceTree = "<group>"; };
 		4CFFD9431B1D9A26002F3786 /* SQLiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteHelper.h; sourceTree = "<group>"; };
@@ -195,8 +198,6 @@
 			children = (
 				4CFFD93B1B1D9A18002F3786 /* Note.h */,
 				4CFFD93C1B1D9A18002F3786 /* Note.m */,
-				4CFFD93D1B1D9A18002F3786 /* StartUp.h */,
-				4CFFD93E1B1D9A18002F3786 /* StartUp.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,6 +341,10 @@
 		82438C2A1AF91842001807A1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				4CCBC67D1B1EDE160024C5CD /* StartUp.h */,
+				4CCBC67E1B1EDE160024C5CD /* StartUp.m */,
+				4CCBC67A1B1EDD9F0024C5CD /* SQLStr.h */,
+				4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */,
 				4CFFD9411B1D9A26002F3786 /* NoteManager.h */,
 				4CFFD9421B1D9A26002F3786 /* NoteManager.m */,
 				4CFFD9431B1D9A26002F3786 /* SQLiteHelper.h */,
@@ -481,11 +486,12 @@
 				821A8A5D1AF3CA990084139A /* CoreDataManager.m in Sources */,
 				4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */,
 				4C0721861AFA15A600CCFD3E /* MCTextField.m in Sources */,
-				4CFFD9401B1D9A18002F3786 /* StartUp.m in Sources */,
+				4CCBC67C1B1EDD9F0024C5CD /* SQLStr.m in Sources */,
 				4CFFD9571B1D9A3D002F3786 /* FMDatabaseQueue.m in Sources */,
 				4CFFD9461B1D9A26002F3786 /* SQLiteHelper.m in Sources */,
 				82074FFF1AFBAF2B00F2B21A /* MCStringExtension.m in Sources */,
 				4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */,
+				4CCBC67F1B1EDE160024C5CD /* StartUp.m in Sources */,
 				821A8A371AF3CA860084139A /* main.m in Sources */,
 				4CFFD9581B1D9A3D002F3786 /* FMResultSet.m in Sources */,
 				4C89297D1AF8C6CA00A8CF3C /* MCNavigationController.m in Sources */,

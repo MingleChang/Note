@@ -46,7 +46,7 @@ typedef enum NoteRepeatAreaType{
     NoteRepeatAreaTypeEntryAndExit
 }NoteRepeatAreaType;
 typedef enum NoteStatus{
-    NoteStatusDelete=-1,
+    NoteStatusTrash=-1,
     NoteStatusNormal
 }NoteStatus;
 @interface Note : NSObject
@@ -75,4 +75,16 @@ typedef enum NoteStatus{
 @property(nonatomic,copy)NSDate *createTime;
 @property(nonatomic,copy)NSDate *modifyTime;
 @property(nonatomic,copy)NSDate *deleteTime;
+
+-(instancetype)init;
+-(instancetype)initWithDBDictionary:(NSDictionary *)dic;
+
+-(BOOL)save;
+-(BOOL)update;
+-(BOOL)destroy;
+
+-(NSArray *)getAllInfoArray;
+-(NSDictionary *)getAllInfoDictionary;
+
++(NSArray *)getAllProperty;
 @end

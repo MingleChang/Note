@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDB.h"
+@class Note;
 @interface SQLiteHelper : NSObject
 @property(nonatomic,strong)FMDatabaseQueue *dbQueue;
 +(SQLiteHelper *)shareManeger;
+
+-(BOOL)insertNote:(Note *)note;
+-(BOOL)updateNote:(Note *)note;
+-(BOOL)deleteNote:(Note *)note;
+-(NSArray *)selectAllNote;
 @end
