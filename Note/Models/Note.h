@@ -50,8 +50,7 @@ typedef enum NoteStatus{
     NoteStatusNormal
 }NoteStatus;
 @interface Note : NSObject
-@property(nonatomic,assign)NSInteger noteId;//ID
-@property(nonatomic,copy)NSString *uniqueId;//唯一ID
+@property(nonatomic,copy)NSString *noteId;//ID
 @property(nonatomic,copy)NSString *title;//标题
 @property(nonatomic,copy)NSString *content;//内容
 @property(nonatomic,copy)NSArray *contentArray;//列表内容

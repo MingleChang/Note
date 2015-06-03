@@ -13,7 +13,7 @@
 -(instancetype)init{
     self = [super init];
     if (self) {
-        self.uniqueId=[NSUUID UUID].UUIDString;
+        self.noteId=[NSUUID UUID].UUIDString;
         self.title=@"";
         self.content=@"";
         self.contentArray=[NSArray array];

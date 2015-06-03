@@ -11,7 +11,6 @@
 @implementation StartUp
 +(BOOL)checkDB{
     NSString *lDBPath=[DOCUMENT_PATH stringByAppendingPathComponent:@"Note.sqlite"];
-    NSLog(@"%@",lDBPath);
     if ([[NSFileManager defaultManager]fileExistsAtPath:lDBPath]) {
         return YES;
     }
