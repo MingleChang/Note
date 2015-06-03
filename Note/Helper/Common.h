@@ -15,9 +15,9 @@
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #ifdef DEBUG
-
+    #define MCLog(...) NSLog(__VA_ARGS__)
 #else
-
+    #define MCLog(...) /* */
 #endif
 
 @interface Common : NSObject
