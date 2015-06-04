@@ -22,7 +22,7 @@
                                     <segue destination="ugl-OM-SFQ" kind="embed" id="kjo-1Q-dk5"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-Ro-L1Z">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-Ro-L1Z">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
                                     <segue destination="QuQ-Ey-zGn" kind="embed" id="iLa-aU-owa"/>
@@ -345,10 +345,10 @@
             </objects>
             <point key="canvasLocation" x="90" y="231"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose View Controller-->
         <scene sceneID="3Ha-Hp-a0M">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QuQ-Ey-zGn" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QuQ-Ey-zGn" customClass="MCChooseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bxq-Bd-Q08"/>
                         <viewControllerLayoutGuide type="bottom" id="Zhz-pf-8a5"/>
@@ -356,11 +356,58 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0yg-br-MQc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l86-YK-XM2" userLabel="MaskView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6Y-R5-pfG">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="568"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-Hl-kQY">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="568"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="Z5A-Hz-IB1">
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="173"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="a1K-Hl-kQY" secondAttribute="bottom" id="Pwe-il-1Z7"/>
+                                    <constraint firstAttribute="trailing" secondItem="a1K-Hl-kQY" secondAttribute="trailing" id="cLy-X5-eP6"/>
+                                    <constraint firstItem="a1K-Hl-kQY" firstAttribute="leading" secondItem="h6Y-R5-pfG" secondAttribute="leading" id="gOu-bF-WrK"/>
+                                    <constraint firstItem="a1K-Hl-kQY" firstAttribute="top" secondItem="h6Y-R5-pfG" secondAttribute="top" id="jBt-KC-e3j"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6PW-N7-uB5" appends="YES" id="ocL-rY-7JH"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="h6Y-R5-pfG" firstAttribute="leading" secondItem="0yg-br-MQc" secondAttribute="leading" id="AgG-8b-dw9"/>
+                            <constraint firstAttribute="trailing" secondItem="h6Y-R5-pfG" secondAttribute="trailing" constant="100" id="D3M-Zu-XbM"/>
+                            <constraint firstItem="Zhz-pf-8a5" firstAttribute="top" secondItem="h6Y-R5-pfG" secondAttribute="bottom" id="HDW-vM-ACr"/>
+                            <constraint firstItem="l86-YK-XM2" firstAttribute="top" secondItem="bxq-Bd-Q08" secondAttribute="bottom" id="YXr-Li-8Go"/>
+                            <constraint firstItem="Zhz-pf-8a5" firstAttribute="top" secondItem="l86-YK-XM2" secondAttribute="bottom" id="jsS-pX-r5z"/>
+                            <constraint firstItem="h6Y-R5-pfG" firstAttribute="top" secondItem="bxq-Bd-Q08" secondAttribute="bottom" id="p0b-3b-YDW"/>
+                            <constraint firstAttribute="trailing" secondItem="l86-YK-XM2" secondAttribute="trailing" id="pIc-w9-rgO"/>
+                            <constraint firstItem="l86-YK-XM2" firstAttribute="leading" secondItem="0yg-br-MQc" secondAttribute="leading" id="sN5-hz-HPt"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9k-KE-MuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6PW-N7-uB5">
+                    <connections>
+                        <action selector="panGestureRecognizer:" destination="QuQ-Ey-zGn" id="WPI-bR-V0w"/>
+                        <outlet property="delegate" destination="QuQ-Ey-zGn" id="nu0-Gz-qNJ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-665" y="1675"/>
         </scene>

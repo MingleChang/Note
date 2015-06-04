@@ -1,5 +1,5 @@
 //
-//  MCRootViewController.h
+//  MCChooseViewController.h
 //  Note
 //
 //  Created by 常峻玮 on 15/6/4.
@@ -8,6 +8,6 @@
 
 #import "MCViewController.h"
 
-@interface MCRootViewController : MCViewController
+@interface MCChooseViewController : MCViewController
 
 @end
