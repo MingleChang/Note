@@ -7,8 +7,12 @@
 //
 
 #import "MCRootViewController.h"
-
+#import "MCChooseViewController.h"
 @interface MCRootViewController ()
+@property(nonatomic,strong)MCChooseViewController *chooseVC;
+@property (weak, nonatomic) IBOutlet UIView *choosView;
+
+- (IBAction)panGestureReconizer:(UIPanGestureRecognizer *)sender;
 
 @end
 
@@ -24,14 +28,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Event Response
+- (IBAction)panGestureReconizer:(UIPanGestureRecognizer *)sender {
+    NSLog(@"Good");
+    switch (sender.state) {
+        case UIGestureRecognizerStateBegan:
+            
+            break;
+        case UIGestureRecognizerStateChanged:
+            
+            break;
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled:
+            
+            break;
+        default:
+            break;
+    }
+}
 
+#pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"MCChooseVC"]) {
+        self.chooseVC=segue.destinationViewController;
+    }
 }
-*/
-
+ 
 @end

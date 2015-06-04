@@ -9,7 +9,7 @@
 #import "MCChooseViewController.h"
 
 @interface MCChooseViewController ()
-- (IBAction)panGestureRecognizer:(UIPanGestureRecognizer *)sender;
+
 
 @end
 
@@ -23,39 +23,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Event Response
-- (IBAction)panGestureRecognizer:(UIPanGestureRecognizer *)sender {
-    CGPoint lPoint1=[sender translationInView:self.view];
-    CGPoint lPoint2=[sender locationInView:self.view];
-    NSLog(@"++++++%@",NSStringFromCGPoint(lPoint1));
-    NSLog(@"------%@",NSStringFromCGPoint(lPoint2));
-    switch (sender.state) {
-        case UIGestureRecognizerStateBegan:
-            
-            break;
-        case UIGestureRecognizerStateChanged:
-            
-            break;
-        case UIGestureRecognizerStateEnded:
-        case UIGestureRecognizerStateCancelled:
-            
-            break;
-        default:
-            break;
-    }
-}
-
-#pragma mark - Gesture Delegate
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    CGPoint translation = [(UIPanGestureRecognizer*)gestureRecognizer translationInView:self.view];
-    if (fabs(translation.x)>fabs(translation.y)) {
-        return YES;
-    }else{
-        return NO;
-    }
 }
 
 /*
