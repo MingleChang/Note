@@ -17,6 +17,7 @@
 		4C8929801AF8C6DE00A8CF3C /* MCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C89297F1AF8C6DE00A8CF3C /* MCTableViewController.m */; };
 		4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */; };
 		4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */; };
+		4CA712A01B1FFACF0015853C /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7129F1B1FFACF0015853C /* MCRootViewController.m */; };
 		4CCBC67C1B1EDD9F0024C5CD /* SQLStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */; };
 		4CCBC67F1B1EDE160024C5CD /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC67E1B1EDE160024C5CD /* StartUp.m */; };
 		4CCBC6871B1EF53E0024C5CD /* MCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC6861B1EF53E0024C5CD /* MCDevice.m */; };
@@ -81,6 +82,8 @@
 		4C8929821AF8C6F700A8CF3C /* MCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTabBarController.m; sourceTree = "<group>"; };
 		4C8929841AF8C70700A8CF3C /* MCCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCollectionViewController.h; sourceTree = "<group>"; };
 		4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCollectionViewController.m; sourceTree = "<group>"; };
+		4CA7129E1B1FFACF0015853C /* MCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRootViewController.h; sourceTree = "<group>"; };
+		4CA7129F1B1FFACF0015853C /* MCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootViewController.m; sourceTree = "<group>"; };
 		4CCBC67A1B1EDD9F0024C5CD /* SQLStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLStr.h; sourceTree = "<group>"; };
 		4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLStr.m; sourceTree = "<group>"; };
 		4CCBC67D1B1EDE160024C5CD /* StartUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUp.h; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				82438C331AF91E57001807A1 /* MCNoteViewController.m */,
 				82438C351AF91E6D001807A1 /* MCRemindViewController.h */,
 				82438C361AF91E6D001807A1 /* MCRemindViewController.m */,
+				4CA7129E1B1FFACF0015853C /* MCRootViewController.h */,
+				4CA7129F1B1FFACF0015853C /* MCRootViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				4C89297A1AF8C6B300A8CF3C /* MCViewController.m in Sources */,
 				82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */,
 				821A8A3D1AF3CA860084139A /* ViewController.m in Sources */,
+				4CA712A01B1FFACF0015853C /* MCRootViewController.m in Sources */,
 				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
 				4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
