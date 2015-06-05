@@ -35,8 +35,8 @@
                             <constraint firstItem="MFd-gh-Z3L" firstAttribute="top" secondItem="eVb-MR-xAs" secondAttribute="top" id="9ZB-9L-0lm"/>
                             <constraint firstAttribute="trailing" secondItem="MFd-gh-Z3L" secondAttribute="trailing" id="C6A-ru-RGB"/>
                             <constraint firstItem="dVK-Ro-L1Z" firstAttribute="top" secondItem="eVb-MR-xAs" secondAttribute="top" id="Jo6-Am-MKY"/>
-                            <constraint firstItem="QN4-KA-bCL" firstAttribute="top" secondItem="MFd-gh-Z3L" secondAttribute="bottom" id="Pmq-3e-k96"/>
-                            <constraint firstItem="QN4-KA-bCL" firstAttribute="top" secondItem="dVK-Ro-L1Z" secondAttribute="bottom" id="i6p-cY-sza"/>
+                            <constraint firstAttribute="bottom" secondItem="MFd-gh-Z3L" secondAttribute="bottom" id="fpM-HA-iOD"/>
+                            <constraint firstAttribute="bottom" secondItem="dVK-Ro-L1Z" secondAttribute="bottom" id="gYP-Eo-iib"/>
                             <constraint firstAttribute="trailing" secondItem="dVK-Ro-L1Z" secondAttribute="trailing" id="n3Q-JR-BKT"/>
                             <constraint firstItem="MFd-gh-Z3L" firstAttribute="leading" secondItem="eVb-MR-xAs" secondAttribute="leading" id="pqq-26-E4S"/>
                             <constraint firstItem="dVK-Ro-L1Z" firstAttribute="leading" secondItem="eVb-MR-xAs" secondAttribute="leading" id="qUd-bc-4N6"/>
@@ -376,26 +376,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="220" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="Z5A-Hz-IB1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="wDL-d9-Kqq"/>
+                                </constraints>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Z5A-Hz-IB1">
                                     <rect key="frame" x="0.0" y="0.0" width="220" height="173"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IpX-Ah-psb">
+                                        <rect key="frame" x="-50" y="65" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IpX-Ah-psb" id="usm-ZH-Tv7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="a1K-Hl-kQY" secondAttribute="trailing" constant="100" id="2Dw-Yj-y2M"/>
+                            <constraint firstItem="l86-YK-XM2" firstAttribute="top" secondItem="0yg-br-MQc" secondAttribute="top" id="6Ih-eg-9kS"/>
                             <constraint firstItem="Zhz-pf-8a5" firstAttribute="top" secondItem="a1K-Hl-kQY" secondAttribute="bottom" id="RZf-FA-POe"/>
                             <constraint firstItem="a1K-Hl-kQY" firstAttribute="leading" secondItem="0yg-br-MQc" secondAttribute="leading" id="Td9-Vr-h7V"/>
-                            <constraint firstItem="l86-YK-XM2" firstAttribute="top" secondItem="bxq-Bd-Q08" secondAttribute="bottom" id="YXr-Li-8Go"/>
-                            <constraint firstItem="Zhz-pf-8a5" firstAttribute="top" secondItem="l86-YK-XM2" secondAttribute="bottom" id="jsS-pX-r5z"/>
+                            <constraint firstAttribute="bottom" secondItem="l86-YK-XM2" secondAttribute="bottom" id="lGp-dd-ph1"/>
                             <constraint firstItem="a1K-Hl-kQY" firstAttribute="top" secondItem="bxq-Bd-Q08" secondAttribute="bottom" id="ozD-S2-08h"/>
                             <constraint firstAttribute="trailing" secondItem="l86-YK-XM2" secondAttribute="trailing" id="pIc-w9-rgO"/>
                             <constraint firstItem="l86-YK-XM2" firstAttribute="leading" secondItem="0yg-br-MQc" secondAttribute="leading" id="sN5-hz-HPt"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="maskView" destination="l86-YK-XM2" id="DcT-vM-7AL"/>
+                        <outlet property="tableView" destination="a1K-Hl-kQY" id="mqe-qZ-kdi"/>
+                        <outlet property="tableViewWidthConstraint" destination="wDL-d9-Kqq" id="xhT-Yd-Def"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9k-KE-MuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

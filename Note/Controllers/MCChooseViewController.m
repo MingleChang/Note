@@ -9,6 +9,9 @@
 #import "MCChooseViewController.h"
 
 @interface MCChooseViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewWidthConstraint;
+@property (weak, nonatomic) IBOutlet UIView *maskView;
 
 
 @end
@@ -18,13 +21,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self initAllSubViewAndData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - Private Motheds
+-(void)initAllSubViewAndData{
+    [self initAllSubViews];
+    [self initAllData];
+}
+-(void)initAllSubViews{
+    self.tableView.transform=CGAffineTransformMakeTranslation(-self.tableViewWidthConstraint.constant, 0);
+    self.maskView.alpha=0;
+    self.view.hidden=YES;
+}
+-(void)initAllData{
+    
+}
+#pragma mark - Public Motheds
+-(void)beginMove{
+    
+}
+-(void)moveWithOffset:(CGPoint)offset{
+    
+}
+-(void)moveEnd{
+    
+}
+-(void)showChooseView{
+    
+}
+-(void)hideChooseView{
+    
+}
 /*
  #pragma mark - Navigation
  

@@ -8,7 +8,7 @@
 
 #import "MCRootViewController.h"
 #import "MCChooseViewController.h"
-@interface MCRootViewController ()
+@interface MCRootViewController ()<UIGestureRecognizerDelegate>
 @property(nonatomic,strong)MCChooseViewController *chooseVC;
 @property (weak, nonatomic) IBOutlet UIView *choosView;
 
@@ -30,10 +30,9 @@
 
 #pragma mark - Event Response
 - (IBAction)panGestureReconizer:(UIPanGestureRecognizer *)sender {
-    NSLog(@"Good");
     switch (sender.state) {
         case UIGestureRecognizerStateBegan:
-            
+            NSLog(@"%@",NSStringFromCGPoint([sender translationInView:self.view]));
             break;
         case UIGestureRecognizerStateChanged:
             
@@ -46,7 +45,6 @@
             break;
     }
 }
-
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

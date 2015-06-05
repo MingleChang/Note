@@ -10,6 +10,7 @@
 
 @interface MCChooseViewController : MCViewController
 -(void)beginMove;
+-(void)moveWithOffset:(CGPoint)offset;
 -(void)moveEnd;
 -(void)showChooseView;
 -(void)hideChooseView;
