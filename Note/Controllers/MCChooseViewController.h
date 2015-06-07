@@ -7,11 +7,18 @@
 //
 
 #import "MCViewController.h"
+@class MCChooseViewController;
+@protocol MCChooseViewControllerDelegate <NSObject>
 
+-(void)chooseViewController:(MCChooseViewController *)vc selectedIndex:(NSInteger)index;
+
+@end
 @interface MCChooseViewController : MCViewController
+@property(nonatomic,assign)id<MCChooseViewControllerDelegate> delegate;
+@property(nonatomic,assign)BOOL isMoving;
 -(void)beginMove;
 -(void)moveWithOffset:(CGPoint)offset;
--(void)moveEnd;
+-(void)moveEnd:(void(^)(BOOL show))block;
 -(void)showChooseView;
 -(void)hideChooseView;
 @end

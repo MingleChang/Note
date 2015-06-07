@@ -19,10 +19,10 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFd-gh-Z3L">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
-                                    <segue destination="ugl-OM-SFQ" kind="embed" id="kjo-1Q-dk5"/>
+                                    <segue destination="ugl-OM-SFQ" kind="embed" identifier="MCRootTabBarVC" id="kjo-1Q-dk5"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-Ro-L1Z">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-Ro-L1Z">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
                                     <segue destination="QuQ-Ey-zGn" kind="embed" identifier="MCChooseVC" id="iLa-aU-owa"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="-665" y="983"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Root Tab Bar View Controller-->
         <scene sceneID="xTu-o0-T2N">
             <objects>
-                <tabBarController id="ugl-OM-SFQ" sceneMemberID="viewController">
+                <tabBarController id="ugl-OM-SFQ" customClass="MCRootTabBarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hde-2p-lQH"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" id="gwe-gc-q6F">
@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="109" y="983"/>
         </scene>
-        <!--View Controller-->
+        <!--记事-->
         <scene sceneID="AiS-9D-R1w">
             <objects>
                 <viewController id="LxD-Ts-2HX" sceneMemberID="viewController">
@@ -108,9 +108,9 @@
                     <view key="view" contentMode="scaleToFill" id="lxb-Uk-9ns">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AGV-FJ-qmh"/>
+                    <navigationItem key="navigationItem" title="记事" id="AGV-FJ-qmh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-4k-r0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +133,7 @@
             </objects>
             <point key="canvasLocation" x="109" y="2914"/>
         </scene>
-        <!--View Controller-->
+        <!--回收站-->
         <scene sceneID="u3g-6j-HHD">
             <objects>
                 <viewController id="bfv-wJ-7Wb" sceneMemberID="viewController">
@@ -144,9 +144,9 @@
                     <view key="view" contentMode="scaleToFill" id="Lg5-CK-CDe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8id-h7-XjL"/>
+                    <navigationItem key="navigationItem" title="回收站" id="8id-h7-XjL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMI-HN-ZHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="109" y="2273"/>
         </scene>
-        <!--View Controller-->
+        <!--归档-->
         <scene sceneID="Vs4-ge-6Zu">
             <objects>
                 <viewController id="JaI-ov-UFz" sceneMemberID="viewController">
@@ -180,9 +180,9 @@
                     <view key="view" contentMode="scaleToFill" id="GTC-5i-iXT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sff-K2-fdr"/>
+                    <navigationItem key="navigationItem" title="归档" id="sff-K2-fdr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfY-va-b8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,7 +205,7 @@
             </objects>
             <point key="canvasLocation" x="109" y="1614"/>
         </scene>
-        <!--View Controller-->
+        <!--提醒-->
         <scene sceneID="FGR-hB-fEy">
             <objects>
                 <viewController id="rdW-Lb-UsB" sceneMemberID="viewController">
@@ -216,9 +216,9 @@
                     <view key="view" contentMode="scaleToFill" id="pRe-jc-oRO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IPx-VG-2WS"/>
+                    <navigationItem key="navigationItem" title="提醒" id="IPx-VG-2WS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoD-jf-OOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,6 +393,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QuQ-Ey-zGn" id="6X2-uy-qP3"/>
+                                    <outlet property="delegate" destination="QuQ-Ey-zGn" id="FiQ-BU-OSe"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <gestureRecognizers/>
@@ -400,8 +404,8 @@
                             <constraint firstItem="l86-YK-XM2" firstAttribute="top" secondItem="0yg-br-MQc" secondAttribute="top" id="6Ih-eg-9kS"/>
                             <constraint firstItem="Zhz-pf-8a5" firstAttribute="top" secondItem="a1K-Hl-kQY" secondAttribute="bottom" id="RZf-FA-POe"/>
                             <constraint firstItem="a1K-Hl-kQY" firstAttribute="leading" secondItem="0yg-br-MQc" secondAttribute="leading" id="Td9-Vr-h7V"/>
+                            <constraint firstItem="a1K-Hl-kQY" firstAttribute="top" secondItem="0yg-br-MQc" secondAttribute="top" id="Uss-Kw-f4z"/>
                             <constraint firstAttribute="bottom" secondItem="l86-YK-XM2" secondAttribute="bottom" id="lGp-dd-ph1"/>
-                            <constraint firstItem="a1K-Hl-kQY" firstAttribute="top" secondItem="bxq-Bd-Q08" secondAttribute="bottom" id="ozD-S2-08h"/>
                             <constraint firstAttribute="trailing" secondItem="l86-YK-XM2" secondAttribute="trailing" id="pIc-w9-rgO"/>
                             <constraint firstItem="l86-YK-XM2" firstAttribute="leading" secondItem="0yg-br-MQc" secondAttribute="leading" id="sN5-hz-HPt"/>
                         </constraints>

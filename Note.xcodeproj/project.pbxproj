@@ -50,6 +50,7 @@
 		82438C2E1AF91914001807A1 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C2D1AF91914001807A1 /* Common.m */; };
 		82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C331AF91E57001807A1 /* MCNoteViewController.m */; };
 		82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C361AF91E6D001807A1 /* MCRemindViewController.m */; };
+		82BF17D41B234E22009B2FF9 /* MCRootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BF17D31B234E22009B2FF9 /* MCRootTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		82438C331AF91E57001807A1 /* MCNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNoteViewController.m; sourceTree = "<group>"; };
 		82438C351AF91E6D001807A1 /* MCRemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRemindViewController.h; sourceTree = "<group>"; };
 		82438C361AF91E6D001807A1 /* MCRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRemindViewController.m; sourceTree = "<group>"; };
+		82BF17D21B234E22009B2FF9 /* MCRootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRootTabBarViewController.h; sourceTree = "<group>"; };
+		82BF17D31B234E22009B2FF9 /* MCRootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 				4CA7129F1B1FFACF0015853C /* MCRootViewController.m */,
 				4CA712B41B20413B0015853C /* MCChooseViewController.h */,
 				4CA712B51B20413B0015853C /* MCChooseViewController.m */,
+				82BF17D21B234E22009B2FF9 /* MCRootTabBarViewController.h */,
+				82BF17D31B234E22009B2FF9 /* MCRootTabBarViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82BF17D41B234E22009B2FF9 /* MCRootTabBarViewController.m in Sources */,
 				4CFFD93F1B1D9A18002F3786 /* Note.m in Sources */,
 				4C89297A1AF8C6B300A8CF3C /* MCViewController.m in Sources */,
 				82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */,
