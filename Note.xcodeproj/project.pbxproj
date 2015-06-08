@@ -24,6 +24,7 @@
 		4CCBC6871B1EF53E0024C5CD /* MCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC6861B1EF53E0024C5CD /* MCDevice.m */; };
 		4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */; };
 		4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EE1AFB2E2300449507 /* MCLineView.m */; };
+		4CF5EA091B252C3C00BCC8F7 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5EA081B252C3C00BCC8F7 /* AppManager.m */; };
 		4CFFD93F1B1D9A18002F3786 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD93C1B1D9A18002F3786 /* Note.m */; };
 		4CFFD9451B1D9A26002F3786 /* NoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9421B1D9A26002F3786 /* NoteManager.m */; };
 		4CFFD9461B1D9A26002F3786 /* SQLiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9441B1D9A26002F3786 /* SQLiteHelper.m */; };
@@ -98,6 +99,8 @@
 		4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDottedLineView.m; sourceTree = "<group>"; };
 		4CF397ED1AFB2E2300449507 /* MCLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLineView.h; sourceTree = "<group>"; };
 		4CF397EE1AFB2E2300449507 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
+		4CF5EA071B252C3C00BCC8F7 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
+		4CF5EA081B252C3C00BCC8F7 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		4CFFD93B1B1D9A18002F3786 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		4CFFD93C1B1D9A18002F3786 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		4CFFD9411B1D9A26002F3786 /* NoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteManager.h; sourceTree = "<group>"; };
@@ -377,6 +380,8 @@
 				82074FFE1AFBAF2B00F2B21A /* MCStringExtension.m */,
 				820750001AFBAFA800F2B21A /* MCDateExtension.h */,
 				820750011AFBAFA800F2B21A /* MCDateExtension.m */,
+				4CF5EA071B252C3C00BCC8F7 /* AppManager.h */,
+				4CF5EA081B252C3C00BCC8F7 /* AppManager.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 				4C89297A1AF8C6B300A8CF3C /* MCViewController.m in Sources */,
 				82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */,
 				821A8A3D1AF3CA860084139A /* ViewController.m in Sources */,
+				4CF5EA091B252C3C00BCC8F7 /* AppManager.m in Sources */,
 				4CA712A01B1FFACF0015853C /* MCRootViewController.m in Sources */,
 				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
 				4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */,

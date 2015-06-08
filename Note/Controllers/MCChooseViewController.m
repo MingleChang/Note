@@ -39,7 +39,7 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
 }
 -(void)initAllData{
-    self.cellTitleArray=@[@"记事",@"提醒",@"归档",@"回收站"];
+    self.cellTitleArray=@[@"Note",@"Reminder",@"Save",@"Trash"];
 }
 -(BOOL)checkShouldHide{
     if (fabs(self.tableView.transform.tx)>self.tableViewWidthConstraint.constant/2) {
@@ -70,10 +70,7 @@
     self.offset=CGPointZero;
     BOOL isHide=[self checkShouldHide];
     if (isHide) {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.tableView.transform=CGAffineTransformMakeTranslation(-self.tableViewWidthConstraint.constant, 0);
-            self.maskView.alpha=0;
-        } completion:^(BOOL finished) {
+        [self hideChooseView:^{
             block(isHide);
         }];
     }else{
@@ -86,11 +83,21 @@
     }
     
 }
--(void)showChooseView{
-    
+-(void)showChooseView:(void (^)())block{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.tableView.transform=CGAffineTransformMakeTranslation(0, 0);
+        self.maskView.alpha=1;
+    } completion:^(BOOL finished) {
+        block();
+    }];
 }
--(void)hideChooseView{
-    
+-(void)hideChooseView:(void (^)())block{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.tableView.transform=CGAffineTransformMakeTranslation(-self.tableViewWidthConstraint.constant, 0);
+        self.maskView.alpha=0;
+    } completion:^(BOOL finished) {
+        block();
+    }];
 }
 
 #pragma mark - TableView DataSource

@@ -19,6 +19,6 @@
 -(void)beginMove;
 -(void)moveWithOffset:(CGPoint)offset;
 -(void)moveEnd:(void(^)(BOOL show))block;
--(void)showChooseView;
--(void)hideChooseView;
+-(void)showChooseView:(void(^)())block;
+-(void)hideChooseView:(void(^)())block;
 @end
