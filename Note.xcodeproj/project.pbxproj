@@ -25,6 +25,8 @@
 		4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */; };
 		4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF397EE1AFB2E2300449507 /* MCLineView.m */; };
 		4CF5EA091B252C3C00BCC8F7 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5EA081B252C3C00BCC8F7 /* AppManager.m */; };
+		4CF5EA0C1B25317900BCC8F7 /* MCArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5EA0B1B25317900BCC8F7 /* MCArchiveViewController.m */; };
+		4CF5EA0F1B25318F00BCC8F7 /* MCTrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5EA0E1B25318F00BCC8F7 /* MCTrashViewController.m */; };
 		4CFFD93F1B1D9A18002F3786 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD93C1B1D9A18002F3786 /* Note.m */; };
 		4CFFD9451B1D9A26002F3786 /* NoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9421B1D9A26002F3786 /* NoteManager.m */; };
 		4CFFD9461B1D9A26002F3786 /* SQLiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFD9441B1D9A26002F3786 /* SQLiteHelper.m */; };
@@ -101,6 +103,10 @@
 		4CF397EE1AFB2E2300449507 /* MCLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLineView.m; sourceTree = "<group>"; };
 		4CF5EA071B252C3C00BCC8F7 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		4CF5EA081B252C3C00BCC8F7 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
+		4CF5EA0A1B25317900BCC8F7 /* MCArchiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCArchiveViewController.h; sourceTree = "<group>"; };
+		4CF5EA0B1B25317900BCC8F7 /* MCArchiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCArchiveViewController.m; sourceTree = "<group>"; };
+		4CF5EA0D1B25318F00BCC8F7 /* MCTrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTrashViewController.h; sourceTree = "<group>"; };
+		4CF5EA0E1B25318F00BCC8F7 /* MCTrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTrashViewController.m; sourceTree = "<group>"; };
 		4CFFD93B1B1D9A18002F3786 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		4CFFD93C1B1D9A18002F3786 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		4CFFD9411B1D9A26002F3786 /* NoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteManager.h; sourceTree = "<group>"; };
@@ -210,6 +216,10 @@
 				4CA712B51B20413B0015853C /* MCChooseViewController.m */,
 				82BF17D21B234E22009B2FF9 /* MCRootTabBarViewController.h */,
 				82BF17D31B234E22009B2FF9 /* MCRootTabBarViewController.m */,
+				4CF5EA0A1B25317900BCC8F7 /* MCArchiveViewController.h */,
+				4CF5EA0B1B25317900BCC8F7 /* MCArchiveViewController.m */,
+				4CF5EA0D1B25318F00BCC8F7 /* MCTrashViewController.h */,
+				4CF5EA0E1B25318F00BCC8F7 /* MCTrashViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -516,6 +526,7 @@
 				4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */,
 				4C0721861AFA15A600CCFD3E /* MCTextField.m in Sources */,
 				4CCBC67C1B1EDD9F0024C5CD /* SQLStr.m in Sources */,
+				4CF5EA0C1B25317900BCC8F7 /* MCArchiveViewController.m in Sources */,
 				4CFFD9571B1D9A3D002F3786 /* FMDatabaseQueue.m in Sources */,
 				4CA712B61B20413B0015853C /* MCChooseViewController.m in Sources */,
 				4CFFD9461B1D9A26002F3786 /* SQLiteHelper.m in Sources */,
@@ -525,6 +536,7 @@
 				821A8A371AF3CA860084139A /* main.m in Sources */,
 				4CFFD9581B1D9A3D002F3786 /* FMResultSet.m in Sources */,
 				4C89297D1AF8C6CA00A8CF3C /* MCNavigationController.m in Sources */,
+				4CF5EA0F1B25318F00BCC8F7 /* MCTrashViewController.m in Sources */,
 				4CFFD9551B1D9A3D002F3786 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

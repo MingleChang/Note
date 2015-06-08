@@ -100,7 +100,7 @@
         <!--记事-->
         <scene sceneID="AiS-9D-R1w">
             <objects>
-                <viewController id="LxD-Ts-2HX" sceneMemberID="viewController">
+                <viewController id="LxD-Ts-2HX" customClass="MCNoteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oOD-gl-ZO6"/>
                         <viewControllerLayoutGuide type="bottom" id="rgo-5q-Wjn"/>
@@ -136,7 +136,7 @@
         <!--回收站-->
         <scene sceneID="u3g-6j-HHD">
             <objects>
-                <viewController id="bfv-wJ-7Wb" sceneMemberID="viewController">
+                <viewController id="bfv-wJ-7Wb" customClass="MCTrashViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hEw-fV-2vr"/>
                         <viewControllerLayoutGuide type="bottom" id="fO5-kn-7Br"/>
@@ -172,7 +172,7 @@
         <!--归档-->
         <scene sceneID="Vs4-ge-6Zu">
             <objects>
-                <viewController id="JaI-ov-UFz" sceneMemberID="viewController">
+                <viewController id="JaI-ov-UFz" customClass="MCArchiveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cFL-0m-CcV"/>
                         <viewControllerLayoutGuide type="bottom" id="lVN-yE-oCS"/>
@@ -208,7 +208,7 @@
         <!--提醒-->
         <scene sceneID="FGR-hB-fEy">
             <objects>
-                <viewController id="rdW-Lb-UsB" sceneMemberID="viewController">
+                <viewController id="rdW-Lb-UsB" customClass="MCRemindViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EpB-8a-itD"/>
                         <viewControllerLayoutGuide type="bottom" id="kUF-8v-4Hu"/>

@@ -39,7 +39,7 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
 }
 -(void)initAllData{
-    self.cellTitleArray=@[@"Note",@"Reminder",@"Save",@"Trash"];
+    self.cellTitleArray=@[@"Notes",@"Reminders",@"Archive",@"Trash"];
 }
 -(BOOL)checkShouldHide{
     if (fabs(self.tableView.transform.tx)>self.tableViewWidthConstraint.constant/2) {
