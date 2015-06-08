@@ -9,6 +9,7 @@
 #import "MCRootViewController.h"
 #import "MCChooseViewController.h"
 #import "MCRootTabBarViewController.h"
+#import "Common.h"
 @interface MCRootViewController ()<UIGestureRecognizerDelegate,MCChooseViewControllerDelegate>
 @property(nonatomic,strong)MCRootTabBarViewController *tabBarVC;
 @property(nonatomic,strong)MCChooseViewController *chooseVC;
@@ -22,12 +23,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initAllSubViewAndData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)initAllSubViewAndData{
+    [self initAllData];
+    [self initAllSubView];
+}
+-(void)initAllSubView{
+    
+}
+-(void)initAllData{
+    [AppManager shareManeger].rootVC=self;
+}
+#pragma mark - Public Motheds
+-(void)showChooseView{
+    self.choosView.hidden=NO;
+    [self.chooseVC showChooseView:^{
+        
+    }];
+}
+-(void)hideChooseView{
+    [self.chooseVC hideChooseView:^{
+        self.choosView.hidden=YES;
+    }];
 }
 #pragma mark - Private Models
 -(BOOL)checkShouldMoveWith:(UIPanGestureRecognizer *)sender{
@@ -81,6 +104,7 @@
     }
     if ([segue.identifier isEqualToString:@"MCRootTabBarVC"]) {
         self.tabBarVC=segue.destinationViewController;
+        [AppManager shareManeger].rootTabBarVC=segue.destinationViewController;
     }
 }
  

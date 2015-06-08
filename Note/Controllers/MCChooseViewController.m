@@ -7,13 +7,17 @@
 //
 
 #import "MCChooseViewController.h"
-
+#import "Common.h"
+#import "MCRootViewController.h"
 @interface MCChooseViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewWidthConstraint;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
 @property(nonatomic,assign)CGPoint offset;
 @property(nonatomic,copy)NSArray *cellTitleArray;
+
+- (IBAction)tapMaskView:(UITapGestureRecognizer *)sender;
+
 @end
 
 @implementation MCChooseViewController
@@ -99,7 +103,10 @@
         block();
     }];
 }
-
+#pragma mark - Event Response
+- (IBAction)tapMaskView:(UITapGestureRecognizer *)sender {
+    [[AppManager shareManeger].rootVC hideChooseView];
+}
 #pragma mark - TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.cellTitleArray.count;
@@ -125,4 +132,5 @@
  // Pass the selected object to the new view controller.
  }
  */
+
 @end

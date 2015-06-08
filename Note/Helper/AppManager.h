@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class MCRootViewController;
+@class MCRootTabBarViewController;
 @interface AppManager : NSObject
+@property(nonatomic,strong)MCRootViewController *rootVC;
+@property(nonatomic,strong)MCRootTabBarViewController *rootTabBarVC;
 +(AppManager *)shareManeger;
 @end

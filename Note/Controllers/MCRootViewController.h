@@ -9,5 +9,6 @@
 #import "MCViewController.h"
 
 @interface MCRootViewController : MCViewController
-
+-(void)showChooseView;
+-(void)hideChooseView;
 @end
