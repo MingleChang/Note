@@ -47,7 +47,8 @@ typedef enum NoteRepeatAreaType{
 }NoteRepeatAreaType;
 typedef enum NoteStatus{
     NoteStatusTrash=-1,
-    NoteStatusNormal
+    NoteStatusNormal,
+    NoteStatusArchive=10
 }NoteStatus;
 @interface Note : NSObject
 @property(nonatomic,copy)NSString *noteId;//ID
