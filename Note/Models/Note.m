@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         self.noteId=[NSUUID UUID].UUIDString;
+        self.userId=@"";
         self.title=@"";
         self.content=@"";
         self.contentArray=[NSArray array];
@@ -62,6 +63,7 @@
 -(NSArray *)getAllInfoArray{
     NSMutableArray *lMutableArray=[NSMutableArray array];
     [lMutableArray addObject:self.noteId];
+    [lMutableArray addObject:self.userId];
     [lMutableArray addObject:self.title];
     [lMutableArray addObject:self.content];
     [lMutableArray addObject:self.checkedContent];
@@ -89,6 +91,6 @@
 }
 #pragma mark - 类方法
 +(NSArray *)getAllProperty{
-    return @[@"noteId",@"title",@"content",@"checkedContent",@"contentType",@"reminderType",@"reminderTime",@"repeatType",@"repeatValue",@"repeatWeekType",@"repeatEndType",@"repeatEndTime",@"repeatCount",@"longitude",@"latitude",@"repeatAreaRadius",@"repeatAreaType",@"status",@"createTime",@"modifyTime",@"deleteTime"];
+    return @[@"noteId",@"userId",@"title",@"content",@"checkedContent",@"contentType",@"reminderType",@"reminderTime",@"repeatType",@"repeatValue",@"repeatWeekType",@"repeatEndType",@"repeatEndTime",@"repeatCount",@"longitude",@"latitude",@"repeatAreaRadius",@"repeatAreaType",@"status",@"createTime",@"modifyTime",@"deleteTime"];
 }
 @end
