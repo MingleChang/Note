@@ -13,4 +13,5 @@
 
 @interface StartUp : NSObject
 +(BOOL)checkDB;
++(BOOL)deleteInvalidNote;
 @end

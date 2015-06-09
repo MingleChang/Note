@@ -17,4 +17,5 @@
 -(BOOL)updateNote:(Note *)note;
 -(BOOL)deleteNote:(Note *)note;
 -(NSArray *)selectAllNote;
+-(BOOL)deleteInvalidNote;
 @end

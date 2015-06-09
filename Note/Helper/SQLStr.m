@@ -36,4 +36,7 @@
 +(NSString *)getSelectAllNoteSqlWithDic{
     return @"SELECT * FROM Note";
 }
++(NSString *)getDeleteInvalidNoteSqlWithDic{
+    return @"DELETE FROM Note WHERE status=-1 AND deleteTime <= STRFTIME('%s', 'NOW','-7 DAY')";
+}
 @end

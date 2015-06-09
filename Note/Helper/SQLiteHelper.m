@@ -58,10 +58,17 @@
     [self.dbQueue inDatabase:^(FMDatabase *db) {
         FMResultSet *lResults=[db executeQuery:[SQLStr getSelectAllNoteSqlWithDic]];
         lResultArray=[self getNoteArrayBy:lResults];
+        [lResults close];
     }];
     return lResultArray;
 }
-
+-(BOOL)deleteInvalidNote{
+    __block BOOL success=NO;
+    [self.dbQueue inDatabase:^(FMDatabase *db) {
+        success=[db executeUpdate:[SQLStr getDeleteInvalidNoteSqlWithDic]];
+    }];
+    return success;
+}
 #pragma mark - Private Models
 -(NSArray *)getNoteArrayBy:(FMResultSet *)result{
     NSMutableArray *lMutableArray=[NSMutableArray array];

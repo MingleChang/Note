@@ -13,4 +13,5 @@
 +(NSString *)getUpdateNoteSqlWithDic;
 +(NSString *)getDeleteNoteSqlWithDic;
 +(NSString *)getSelectAllNoteSqlWithDic;
++(NSString *)getDeleteInvalidNoteSqlWithDic;
 @end

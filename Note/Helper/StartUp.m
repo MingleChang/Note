@@ -7,7 +7,7 @@
 //
 
 #import "StartUp.h"
-
+#import "Common.h"
 @implementation StartUp
 +(BOOL)checkDB{
     NSString *lDBPath=[DOCUMENT_PATH stringByAppendingPathComponent:@"Note.sqlite"];
@@ -19,5 +19,8 @@
         return YES;
     }
     return NO;
+}
++(BOOL)deleteInvalidNote{
+    return [[SQLiteHelper shareManeger]deleteInvalidNote];
 }
 @end
