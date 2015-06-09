@@ -23,4 +23,7 @@
 +(BOOL)deleteInvalidNote{
     return [[SQLiteHelper shareManeger]deleteInvalidNote];
 }
++(void)loadAllNote{
+    [[NoteManager shareManeger]loadAllNote];
+}
 @end
