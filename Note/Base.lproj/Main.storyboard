@@ -85,7 +85,7 @@
             <objects>
                 <navigationController id="ln2-AV-3Yc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="INI-fT-sed"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xj9-Mc-Y7d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xj9-Mc-Y7d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -106,11 +106,45 @@
                         <viewControllerLayoutGuide type="bottom" id="rgo-5q-Wjn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lxb-Uk-9ns">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Da-eJ-4j4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hPD-55-1Io">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LxD-Ts-2HX" id="wrV-e4-5nd"/>
+                                    <outlet property="delegate" destination="LxD-Ts-2HX" id="eNr-qB-6pE"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQN-sz-PqH">
+                                <rect key="frame" x="266" y="486" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Da-eJ-4j4" secondAttribute="bottom" constant="-49" id="1ss-Zc-lfk"/>
+                            <constraint firstItem="8Da-eJ-4j4" firstAttribute="leading" secondItem="lxb-Uk-9ns" secondAttribute="leading" id="5HJ-np-6jU"/>
+                            <constraint firstAttribute="trailing" secondItem="8Da-eJ-4j4" secondAttribute="trailing" id="9k7-p9-ckF"/>
+                            <constraint firstAttribute="trailing" secondItem="vQN-sz-PqH" secondAttribute="trailing" constant="8" id="Itc-6U-WxN"/>
+                            <constraint firstItem="rgo-5q-Wjn" firstAttribute="top" secondItem="vQN-sz-PqH" secondAttribute="bottom" constant="8" id="bMH-ue-uXu"/>
+                            <constraint firstItem="8Da-eJ-4j4" firstAttribute="top" secondItem="oOD-gl-ZO6" secondAttribute="bottom" id="ib6-WV-p3L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="记事" id="AGV-FJ-qmh"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8Da-eJ-4j4" id="J24-vx-idx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-4k-r0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +155,7 @@
             <objects>
                 <navigationController id="SbM-eJ-r7k" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="JeS-Bd-Khb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CFV-nj-mkc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CFV-nj-mkc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -142,9 +176,9 @@
                         <viewControllerLayoutGuide type="bottom" id="fO5-kn-7Br"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lg5-CK-CDe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="回收站" id="8id-h7-XjL"/>
                 </viewController>
@@ -157,7 +191,7 @@
             <objects>
                 <navigationController id="nuk-NI-yKd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dJL-fs-KEL"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RPA-2B-bJk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RPA-2B-bJk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -178,9 +212,9 @@
                         <viewControllerLayoutGuide type="bottom" id="lVN-yE-oCS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GTC-5i-iXT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="归档" id="sff-K2-fdr"/>
                 </viewController>
@@ -193,7 +227,7 @@
             <objects>
                 <navigationController id="SBt-8E-iLO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KDk-Hi-Meb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F6k-Zl-891">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="F6k-Zl-891">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -214,9 +248,9 @@
                         <viewControllerLayoutGuide type="bottom" id="kUF-8v-4Hu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pRe-jc-oRO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="提醒" id="IPx-VG-2WS"/>
                 </viewController>
@@ -376,7 +410,7 @@
                                     <outletCollection property="gestureRecognizers" destination="8Ty-tK-71y" appends="YES" id="vyZ-Vw-2z5"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-Hl-kQY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-Hl-kQY">
                                 <rect key="frame" x="0.0" y="0.0" width="220" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -386,7 +420,7 @@
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Z5A-Hz-IB1">
                                     <rect key="frame" x="0.0" y="0.0" width="220" height="173"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="1" green="0.69736842105263153" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IpX-Ah-psb">

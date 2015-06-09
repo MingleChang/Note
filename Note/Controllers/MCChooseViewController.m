@@ -41,6 +41,7 @@
     self.tableView.transform=CGAffineTransformMakeTranslation(-self.tableViewWidthConstraint.constant, 0);
     self.maskView.alpha=0;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 -(void)initAllData{
     self.cellTitleArray=@[@"Notes",@"Reminders",@"Archive",@"Trash"];

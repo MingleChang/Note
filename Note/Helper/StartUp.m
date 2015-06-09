@@ -9,6 +9,11 @@
 #import "StartUp.h"
 #import "Common.h"
 @implementation StartUp
++(void)launch{
+    [self checkDB];
+    [self deleteInvalidNote];
+    [self loadAllNote];
+}
 +(BOOL)checkDB{
     NSString *lDBPath=[DOCUMENT_PATH stringByAppendingPathComponent:@"Note.sqlite"];
     if ([[NSFileManager defaultManager]fileExistsAtPath:lDBPath]) {

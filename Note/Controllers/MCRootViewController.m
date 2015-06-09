@@ -56,7 +56,7 @@
 -(BOOL)checkShouldMoveWith:(UIPanGestureRecognizer *)sender{
     if (self.choosView.hidden==YES) {
         CGPoint lLocationPoint=[sender locationInView:self.view];
-        if (lLocationPoint.x<20) {
+        if (lLocationPoint.x<30) {
             return YES;
         }else{
             return NO;
@@ -94,6 +94,7 @@
 #pragma mark - MCChooseViewController Delegate
 -(void)chooseViewController:(MCChooseViewController *)vc selectedIndex:(NSInteger)index{
     self.tabBarVC.selectedIndex=index;
+    [self hideChooseView];
 }
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation

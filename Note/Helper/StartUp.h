@@ -12,6 +12,7 @@
 #define LIBRARY_PATH NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0]
 
 @interface StartUp : NSObject
++(void)launch;
 +(BOOL)checkDB;
 +(BOOL)deleteInvalidNote;
 +(void)loadAllNote;

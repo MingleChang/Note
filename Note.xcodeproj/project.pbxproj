@@ -57,6 +57,8 @@
 		82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C331AF91E57001807A1 /* MCNoteViewController.m */; };
 		82438C371AF91E6D001807A1 /* MCRemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82438C361AF91E6D001807A1 /* MCRemindViewController.m */; };
 		82BF17D41B234E22009B2FF9 /* MCRootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BF17D31B234E22009B2FF9 /* MCRootTabBarViewController.m */; };
+		82C3F0DD1B2736E000D943DD /* MCNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C3F0DB1B2736E000D943DD /* MCNoteCell.m */; };
+		82C3F0DE1B2736E000D943DD /* MCNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C3F0DC1B2736E000D943DD /* MCNoteCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,9 @@
 		82438C361AF91E6D001807A1 /* MCRemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRemindViewController.m; sourceTree = "<group>"; };
 		82BF17D21B234E22009B2FF9 /* MCRootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRootTabBarViewController.h; sourceTree = "<group>"; };
 		82BF17D31B234E22009B2FF9 /* MCRootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootTabBarViewController.m; sourceTree = "<group>"; };
+		82C3F0DA1B2736E000D943DD /* MCNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNoteCell.h; sourceTree = "<group>"; };
+		82C3F0DB1B2736E000D943DD /* MCNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNoteCell.m; sourceTree = "<group>"; };
+		82C3F0DC1B2736E000D943DD /* MCNoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNoteCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +214,9 @@
 				4C0721821AFA15A600CCFD3E /* MCTextField.m */,
 				4C8929741AF8A09700A8CF3C /* MCTextView.h */,
 				4C8929751AF8A09700A8CF3C /* MCTextView.m */,
+				82C3F0DA1B2736E000D943DD /* MCNoteCell.h */,
+				82C3F0DB1B2736E000D943DD /* MCNoteCell.m */,
+				82C3F0DC1B2736E000D943DD /* MCNoteCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -492,6 +500,7 @@
 				821A8A401AF3CA860084139A /* Main.storyboard in Resources */,
 				4CBB456F1B26EA3D0057CDBD /* MCListChooseCell.xib in Resources */,
 				4CFFD95B1B1DAAF2002F3786 /* Note.sqlite in Resources */,
+				82C3F0DE1B2736E000D943DD /* MCNoteCell.xib in Resources */,
 				821A8A451AF3CA860084139A /* LaunchScreen.xib in Resources */,
 				821A8A421AF3CA860084139A /* Images.xcassets in Resources */,
 			);
@@ -520,6 +529,7 @@
 				4CA712A01B1FFACF0015853C /* MCRootViewController.m in Sources */,
 				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
 				4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */,
+				82C3F0DD1B2736E000D943DD /* MCNoteCell.m in Sources */,
 				4CBB45701B26EA3D0057CDBD /* MCListChooseView.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
 				4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */,
