@@ -19,6 +19,9 @@
 		4C8929861AF8C70700A8CF3C /* MCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8929851AF8C70700A8CF3C /* MCCollectionViewController.m */; };
 		4CA712A01B1FFACF0015853C /* MCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7129F1B1FFACF0015853C /* MCRootViewController.m */; };
 		4CA712B61B20413B0015853C /* MCChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA712B51B20413B0015853C /* MCChooseViewController.m */; };
+		4CBB456E1B26EA3D0057CDBD /* MCListChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB456A1B26EA3D0057CDBD /* MCListChooseCell.m */; };
+		4CBB456F1B26EA3D0057CDBD /* MCListChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB456B1B26EA3D0057CDBD /* MCListChooseCell.xib */; };
+		4CBB45701B26EA3D0057CDBD /* MCListChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB456D1B26EA3D0057CDBD /* MCListChooseView.m */; };
 		4CCBC67C1B1EDD9F0024C5CD /* SQLStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */; };
 		4CCBC67F1B1EDE160024C5CD /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC67E1B1EDE160024C5CD /* StartUp.m */; };
 		4CCBC6871B1EF53E0024C5CD /* MCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCBC6861B1EF53E0024C5CD /* MCDevice.m */; };
@@ -91,6 +94,11 @@
 		4CA7129F1B1FFACF0015853C /* MCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRootViewController.m; sourceTree = "<group>"; };
 		4CA712B41B20413B0015853C /* MCChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCChooseViewController.h; sourceTree = "<group>"; };
 		4CA712B51B20413B0015853C /* MCChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCChooseViewController.m; sourceTree = "<group>"; };
+		4CBB45691B26EA3D0057CDBD /* MCListChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCListChooseCell.h; sourceTree = "<group>"; };
+		4CBB456A1B26EA3D0057CDBD /* MCListChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCListChooseCell.m; sourceTree = "<group>"; };
+		4CBB456B1B26EA3D0057CDBD /* MCListChooseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCListChooseCell.xib; sourceTree = "<group>"; };
+		4CBB456C1B26EA3D0057CDBD /* MCListChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCListChooseView.h; sourceTree = "<group>"; };
+		4CBB456D1B26EA3D0057CDBD /* MCListChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCListChooseView.m; sourceTree = "<group>"; };
 		4CCBC67A1B1EDD9F0024C5CD /* SQLStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLStr.h; sourceTree = "<group>"; };
 		4CCBC67B1B1EDD9F0024C5CD /* SQLStr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLStr.m; sourceTree = "<group>"; };
 		4CCBC67D1B1EDE160024C5CD /* StartUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUp.h; sourceTree = "<group>"; };
@@ -182,6 +190,11 @@
 		4C8929731AF8A09700A8CF3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CBB45691B26EA3D0057CDBD /* MCListChooseCell.h */,
+				4CBB456A1B26EA3D0057CDBD /* MCListChooseCell.m */,
+				4CBB456B1B26EA3D0057CDBD /* MCListChooseCell.xib */,
+				4CBB456C1B26EA3D0057CDBD /* MCListChooseView.h */,
+				4CBB456D1B26EA3D0057CDBD /* MCListChooseView.m */,
 				4CF397EB1AFB2E2300449507 /* MCDottedLineView.h */,
 				4CF397EC1AFB2E2300449507 /* MCDottedLineView.m */,
 				4CF397ED1AFB2E2300449507 /* MCLineView.h */,
@@ -477,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821A8A401AF3CA860084139A /* Main.storyboard in Resources */,
+				4CBB456F1B26EA3D0057CDBD /* MCListChooseCell.xib in Resources */,
 				4CFFD95B1B1DAAF2002F3786 /* Note.sqlite in Resources */,
 				821A8A451AF3CA860084139A /* LaunchScreen.xib in Resources */,
 				821A8A421AF3CA860084139A /* Images.xcassets in Resources */,
@@ -506,6 +520,7 @@
 				4CA712A01B1FFACF0015853C /* MCRootViewController.m in Sources */,
 				82438C341AF91E57001807A1 /* MCNoteViewController.m in Sources */,
 				4CF397EF1AFB2E2300449507 /* MCDottedLineView.m in Sources */,
+				4CBB45701B26EA3D0057CDBD /* MCListChooseView.m in Sources */,
 				4C8929761AF8A09700A8CF3C /* MCTextView.m in Sources */,
 				4CF397F01AFB2E2300449507 /* MCLineView.m in Sources */,
 				4CFFD9541B1D9A3D002F3786 /* FMDatabase.m in Sources */,
@@ -533,6 +548,7 @@
 				82074FFF1AFBAF2B00F2B21A /* MCStringExtension.m in Sources */,
 				4C8929831AF8C6F700A8CF3C /* MCTabBarController.m in Sources */,
 				4CCBC67F1B1EDE160024C5CD /* StartUp.m in Sources */,
+				4CBB456E1B26EA3D0057CDBD /* MCListChooseCell.m in Sources */,
 				821A8A371AF3CA860084139A /* main.m in Sources */,
 				4CFFD9581B1D9A3D002F3786 /* FMResultSet.m in Sources */,
 				4C89297D1AF8C6CA00A8CF3C /* MCNavigationController.m in Sources */,
