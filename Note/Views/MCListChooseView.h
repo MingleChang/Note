@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MCListChooseView;
+@protocol MCListChooseViewDelegate <NSObject>
+
+@optional
+-(void)listChooseView:(MCListChooseView *)view selectIndex:(NSInteger)index;
+-(void)listChooseViewCancel:(MCListChooseView *)view;
+
+@end
 
 @interface MCListChooseView : UIView
+@property(nonatomic,assign)id<MCListChooseViewDelegate> delegate;
 -(instancetype)initWithList:(NSArray *)array;
 -(void)showInView:(UIView *)view withPoint:(CGPoint)point;
 @end

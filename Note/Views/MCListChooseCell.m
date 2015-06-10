@@ -17,6 +17,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
+    self.lineHeightConstraint.constant=1/[UIScreen mainScreen].scale;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
