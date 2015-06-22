@@ -20,7 +20,7 @@
 -(void)loadAllNote{
     NSArray *lAllNote=[[SQLiteHelper shareManeger]selectAllNote];
     NSPredicate *lNormalPredicate=[NSPredicate predicateWithFormat:@"status=0"];
-    NSPredicate *lReminderPredicate=[NSPredicate predicateWithFormat:@"reminderType!=0"];
+    NSPredicate *lReminderPredicate=[NSPredicate predicateWithFormat:@"reminderType!=0 AND status!=-1"];
     NSPredicate *lArchivePredicate=[NSPredicate predicateWithFormat:@"status=10"];
     NSPredicate *lTrashPredicate=[NSPredicate predicateWithFormat:@"status=-1"];
     NSArray *lAllNormalNote=[lAllNote filteredArrayUsingPredicate:lNormalPredicate];

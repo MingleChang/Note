@@ -61,16 +61,16 @@ typedef enum NoteStatus{
 @property(nonatomic,assign)NoteContentType contentType;//内容的类型
 @property(nonatomic,assign)NoteReminderType reminderType;//提醒类型
 @property(nonatomic,copy)NSDate *reminderTime;//提醒时间
-@property(nonatomic,assign)NoteRepeatType repeatType;
-@property(nonatomic,assign)NSInteger repeatValue;
-@property(nonatomic,assign)NoteRepeatWeekType repeatWeekType;
-@property(nonatomic,assign)NoteRepeatEndType repeatEndType;
-@property(nonatomic,copy)NSDate *repeatEndTime;
-@property(nonatomic,assign)NSInteger repeatCount;
-@property(nonatomic,assign)CGFloat longitude;
-@property(nonatomic,assign)CGFloat latitude;
-@property(nonatomic,assign)CGFloat repeatAreaRadius;
-@property(nonatomic,assign)NoteRepeatAreaType repeatAreaType;
+@property(nonatomic,assign)NoteRepeatType repeatType;//提醒重复类型
+@property(nonatomic,assign)NSInteger repeatValue;//重复值
+@property(nonatomic,assign)NoteRepeatWeekType repeatWeekType;//重复提醒的周类型
+@property(nonatomic,assign)NoteRepeatEndType repeatEndType;//重复提醒的结束类型
+@property(nonatomic,copy)NSDate *repeatEndTime;//重复提醒的结束时间
+@property(nonatomic,assign)NSInteger repeatCount;//重复次数
+@property(nonatomic,assign)CGFloat longitude;//经度
+@property(nonatomic,assign)CGFloat latitude;//纬度
+@property(nonatomic,assign)CGFloat repeatAreaRadius;//半径
+@property(nonatomic,assign)NoteRepeatAreaType repeatAreaType;//位置提醒类型
 
 @property(nonatomic,assign)NoteStatus status;
 

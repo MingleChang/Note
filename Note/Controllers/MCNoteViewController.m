@@ -7,13 +7,17 @@
 //
 
 #import "MCNoteViewController.h"
+#import "MCRootViewController.h"
 #import "Common.h"
 #import "MCNoteCell.h"
+#import "MCNoteInfoViewController.h"
 #define CELL_ID @"MCNoteCellId"
+#define NOTE_INFO_VC_ID @"MCNoteInfoViewController"
 @interface MCNoteViewController()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *addNoteButton;
 
+- (IBAction)leftBarButtonClick:(UIBarButtonItem *)sender;
 - (IBAction)addNoteButtonClick:(UIButton *)sender;
 
 @end
@@ -40,11 +44,21 @@
 -(void)initAllSubViews{
     [self.collectionView registerNib:[UINib nibWithNibName:@"MCNoteCell" bundle:nil] forCellWithReuseIdentifier:CELL_ID];
 //    [self.addNoteButton setBackgroundColor:RGB(217, 52, 72)];
-    [self.addNoteButton setTitle:@"+" forState:UIControlStateNormal];
     self.addNoteButton.layer.cornerRadius=25;
+    self.addNoteButton.layer.shadowOffset=CGSizeMake(-1, 1);
+    self.addNoteButton.layer.shadowOpacity=1;
+}
+-(void)showChooseView{
+    [[AppManager shareManeger].rootVC showChooseView];
 }
 #pragma mark - Event Response
+- (IBAction)leftBarButtonClick:(UIBarButtonItem *)sender {
+    [self showChooseView];
+}
+
 - (IBAction)addNoteButtonClick:(UIButton *)sender {
+    Note *lNewNote=[[Note alloc]init];
+    [self performSegueWithIdentifier:NOTE_INFO_VC_ID sender:lNewNote];
 }
 #pragma mark - CollectionView DataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -56,6 +70,8 @@
 }
 #pragma mark - CollectionView Delegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    Note *lNote=[[NoteManager shareManeger].allNormalNote objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:NOTE_INFO_VC_ID sender:lNote];
 }
 #pragma mark - CollectionView FlowLayout Delegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -69,6 +85,14 @@
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     return 5;
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:NOTE_INFO_VC_ID]) {
+        MCNoteInfoViewController *lNoteInfoViewController=(MCNoteInfoViewController *)segue.destinationViewController;
+        lNoteInfoViewController.note=sender;
+    }
 }
 
 @end

@@ -39,6 +39,8 @@
 }
 -(void)initAllSubViews{
     self.tableView.transform=CGAffineTransformMakeTranslation(-self.tableViewWidthConstraint.constant, 0);
+    self.tableView.layer.shadowOffset=CGSizeMake(1, 0);
+    self.tableView.layer.shadowOpacity=1;
     self.maskView.alpha=0;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellId"];
     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];

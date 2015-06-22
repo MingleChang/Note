@@ -88,6 +88,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xj9-Mc-Y7d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.69736842109999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="LxD-Ts-2HX" kind="relationship" relationship="rootViewController" id="sOE-OZ-dnk"/>
@@ -100,7 +105,7 @@
         <!--记事-->
         <scene sceneID="AiS-9D-R1w">
             <objects>
-                <viewController id="LxD-Ts-2HX" customClass="MCNoteViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCNoteViewController" id="LxD-Ts-2HX" customClass="MCNoteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oOD-gl-ZO6"/>
                         <viewControllerLayoutGuide type="bottom" id="rgo-5q-Wjn"/>
@@ -131,8 +136,8 @@
                                     <constraint firstAttribute="height" constant="50" id="U0u-Wb-302"/>
                                     <constraint firstAttribute="width" constant="50" id="v50-XM-HsU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
-                                <state key="normal" title="+">
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" image="AddButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -150,11 +155,18 @@
                             <constraint firstItem="8Da-eJ-4j4" firstAttribute="top" secondItem="oOD-gl-ZO6" secondAttribute="bottom" id="ib6-WV-p3L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="记事" id="AGV-FJ-qmh"/>
+                    <navigationItem key="navigationItem" title="记事" id="AGV-FJ-qmh">
+                        <barButtonItem key="leftBarButtonItem" image="Home" id="JXo-L7-8cZ">
+                            <connections>
+                                <action selector="leftBarButtonClick:" destination="LxD-Ts-2HX" id="8Gl-dV-0AT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addNoteButton" destination="vQN-sz-PqH" id="ELh-UK-bfd"/>
                         <outlet property="collectionView" destination="8Da-eJ-4j4" id="J24-vx-idx"/>
+                        <segue destination="cFT-30-Aaj" kind="push" identifier="MCNoteInfoViewController" id="U4x-a3-l14"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usi-4k-r0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,6 +204,9 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="回收站" id="8id-h7-XjL"/>
+                    <connections>
+                        <segue destination="cFT-30-Aaj" kind="push" identifier="MCNoteInfoViewController" id="hgF-Lt-Neo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMI-HN-ZHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +243,9 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="归档" id="sff-K2-fdr"/>
+                    <connections>
+                        <segue destination="cFT-30-Aaj" kind="push" identifier="MCNoteInfoViewController" id="AxT-SV-gS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfY-va-b8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,15 +282,37 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="提醒" id="IPx-VG-2WS"/>
+                    <connections>
+                        <segue destination="cFT-30-Aaj" kind="push" identifier="MCNoteInfoViewController" id="IT6-cY-1TP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoD-jf-OOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="488" y="1614"/>
         </scene>
+        <!--Note Info View Controller-->
+        <scene sceneID="Gx1-C1-Iyx">
+            <objects>
+                <viewController storyboardIdentifier="MCNoteInfoViewController" id="cFT-30-Aaj" customClass="MCNoteInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQt-Ur-Tq3"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9Q-VP-sgc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SiO-is-aLR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q71-KX-bba"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdQ-ea-fc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="1908"/>
+        </scene>
         <!--Note Edit View Controller-->
         <scene sceneID="3oJ-dZ-tit">
             <objects>
-                <viewController id="XfO-3p-dMz" customClass="MCNoteEditViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCNoteEditViewController" id="XfO-3p-dMz" customClass="MCNoteEditViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bxh-gH-hDS"/>
                         <viewControllerLayoutGuide type="bottom" id="lkO-Wf-JLi"/>
@@ -421,7 +461,7 @@
                                     <outletCollection property="gestureRecognizers" destination="8Ty-tK-71y" appends="YES" id="vyZ-Vw-2z5"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-Hl-kQY">
+                            <tableView contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-Hl-kQY">
                                 <rect key="frame" x="0.0" y="0.0" width="220" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -434,7 +474,7 @@
                                     <color key="backgroundColor" red="1" green="0.69736842105263153" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IpX-Ah-psb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellId" id="IpX-Ah-psb">
                                         <rect key="frame" x="-50" y="65" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IpX-Ah-psb" id="usm-ZH-Tv7">
@@ -476,9 +516,16 @@
             <point key="canvasLocation" x="-665" y="1675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AddButton" width="25" height="25"/>
+        <image name="Home" width="21" height="21"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="U4x-a3-l14"/>
+    </inferredMetricsTieBreakers>
 </document>
