@@ -111,6 +111,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Da-eJ-4j4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hPD-55-1Io">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -123,11 +124,20 @@
                                     <outlet property="delegate" destination="LxD-Ts-2HX" id="eNr-qB-6pE"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQN-sz-PqH">
-                                <rect key="frame" x="266" y="486" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQN-sz-PqH">
+                                <rect key="frame" x="262" y="466" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U0u-Wb-302"/>
+                                    <constraint firstAttribute="width" constant="50" id="v50-XM-HsU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNoteButtonClick:" destination="LxD-Ts-2HX" eventType="touchUpInside" id="aEp-u4-Wya"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,6 +153,7 @@
                     <navigationItem key="navigationItem" title="记事" id="AGV-FJ-qmh"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addNoteButton" destination="vQN-sz-PqH" id="ELh-UK-bfd"/>
                         <outlet property="collectionView" destination="8Da-eJ-4j4" id="J24-vx-idx"/>
                     </connections>
                 </viewController>

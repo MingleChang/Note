@@ -12,6 +12,9 @@
 #define CELL_ID @"MCNoteCellId"
 @interface MCNoteViewController()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *addNoteButton;
+
+- (IBAction)addNoteButtonClick:(UIButton *)sender;
 
 @end
 @implementation MCNoteViewController
@@ -36,6 +39,12 @@
 }
 -(void)initAllSubViews{
     [self.collectionView registerNib:[UINib nibWithNibName:@"MCNoteCell" bundle:nil] forCellWithReuseIdentifier:CELL_ID];
+//    [self.addNoteButton setBackgroundColor:RGB(217, 52, 72)];
+    [self.addNoteButton setTitle:@"+" forState:UIControlStateNormal];
+    self.addNoteButton.layer.cornerRadius=25;
+}
+#pragma mark - Event Response
+- (IBAction)addNoteButtonClick:(UIButton *)sender {
 }
 #pragma mark - CollectionView DataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -61,4 +70,5 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     return 5;
 }
+
 @end

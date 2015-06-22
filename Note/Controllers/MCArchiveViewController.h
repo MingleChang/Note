@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Mingle. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MCViewController.h"
 
-@interface MCArchiveViewController : UIViewController
+@interface MCArchiveViewController : MCViewController
 
 @end
