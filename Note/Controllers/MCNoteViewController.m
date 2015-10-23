@@ -11,8 +11,10 @@
 #import "Common.h"
 #import "MCNoteCell.h"
 #import "MCNoteInfoViewController.h"
+#import "MCNoteEditViewController.h"
 #define CELL_ID @"MCNoteCellId"
 #define NOTE_INFO_VC_ID @"MCNoteInfoViewController"
+#define NOTE_EDIT_VC_ID @"MCNoteEditViewController"
 @interface MCNoteViewController()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *addNoteButton;
@@ -58,7 +60,9 @@
 
 - (IBAction)addNoteButtonClick:(UIButton *)sender {
     Note *lNewNote=[[Note alloc]init];
-    [self performSegueWithIdentifier:NOTE_INFO_VC_ID sender:lNewNote];
+//    [self performSegueWithIdentifier:NOTE_INFO_VC_ID sender:lNewNote];
+    
+    [self performSegueWithIdentifier:NOTE_EDIT_VC_ID sender:lNewNote];
 }
 #pragma mark - CollectionView DataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
